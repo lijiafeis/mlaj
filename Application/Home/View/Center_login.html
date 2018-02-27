@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/reset.css"/>
+</head>
+<body>
+<div class="wrap">
+	<img class="logo_img" src="__PUBLIC__/home/images6/logo.png"/>
+	<div class="login_wrap">
+		<input class="moblie" type="" name="tel" id="tel" value="{$username}" placeholder="请输入手机号码" maxlength="11"/>
+		<input class="pwd" type="password" name="password" id="password" value="{$password}" placeholder="请输入密码"/>
+		<a  class="forget_pwd" href="{:U('User/wangjiPass')}">忘记密码？</a>
+		<a class="login_btn"  onclick="loginValidate()" style="background:#6CCDFF">登录</a>
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    function loginValidate() {
+        var tel = $("#tel").val();
+        var password = $('#password').val();
+        $.ajax({
+            type:'post',
+            url:"{:U('User/loginValidate')}",
+            dataType:'json',
+            data:{
+                tel:tel,
+                password:password,
+            },
+            success:function (data) {
+                if(data == -2){
+                    layer.msg('后台审核中');
+                }
+                if(data == 0){
+                    layer.msg('登录成功');
+                    location.href = "{:U('Center/index')}"
+                }
+                if(data == -1){
+                    layer.msg('登录失败');
+                }
+                if(data == -3){
+                    layer.msg('请到自己的微信号登录');
+                }
+
+            }
+        });
+    }
+</script>
+</html>

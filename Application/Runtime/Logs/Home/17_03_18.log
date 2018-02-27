@@ -1,0 +1,34 @@
+[ 2017-03-18T06:36:59+08:00 ] 58.247.206.148 /index.php/Home/Weixin/index/token/tlsvde1478348623?signature=9a366c9ce5495baccafb4931fa6d26de62278c55&timestamp=1489790219&nonce=2024194564&openid=os5GltzshU95C6g8isgAM3_ZxKhU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Weixin
+
+[ 2017-03-18T06:37:04+08:00 ] 58.247.206.158 /index.php/Home/Weixin/index/token/tlsvde1478348623?signature=9017544c7fb68282f6f2e52fe6db2794b374be4a&timestamp=1489790224&nonce=618953259&openid=os5GltzshU95C6g8isgAM3_ZxKhU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Weixin
+
+[ 2017-03-18T08:53:26+08:00 ] 223.96.147.107 /home/index/tiaozhuan?id=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2017-03-18T08:53:35+08:00 ] 180.163.2.118 /home/index/tiaozhuan?id=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

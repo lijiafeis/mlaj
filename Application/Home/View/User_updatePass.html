@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+</head>
+<body>
+<div class="wrap">
+	<div class="register xc-box">
+		<div class="mobile-input">
+			<input type="text" style="width: 100%" name="oldPass" id="oldPass" value="" placeholder="请输入旧密码" maxlength="11"/>
+		</div>
+		<div class="mobile-input" style="margin-top: 20px;margin-bottom: 20px;">
+			<input type="text" style="width: 100%" name="newPass" id="newPass" value="" placeholder="请输入新密码" maxlength="11"/>
+		</div>
+		<a  class="btn cx-btn" style="background:#6CCDFF" onclick="updatePass()">修改</a>
+	</div>
+</div>	
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+
+    function updatePass(){
+        var oldPass = $('#oldPass').val();
+        var newPass = $('#newPass').val();
+        $.post("{:U('updatePass')}",{oldPass:oldPass,newPass:newPass},
+            function(data){
+//            alert('a');
+                if(data == -1){
+                    layer.msg('密码不正确');
+                }
+                if(data == 0){
+                    layer.msg('修改成功');
+//                    location.href = "{:U('zhuce_two')}?tel=" + tel + "&sj_userid=" + sj_userid;
+				}
+				if(data == -2){
+                    layer.msg('修改失败');
+				}
+//				if(data == -3){
+//				    layer.msg('图形验证码错误');
+//				}
+
+            })
+    }
+</script>
+</html>

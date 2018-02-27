@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/default.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/commom.css"/>
+	<!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>-->
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style04.27.css"/>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<div class="col_goods">
+		<ul class="goods_2">
+			<volist name="data" id="vv">
+				<li style="display: flex;">
+					<img src="{$vv.img_url}"/>
+					<span class="text-active" id="id{$vv.id}" style="display: none">{$vv.id}</span>
+					<div class="goods-info" id="shop{$vv.id}">
+						<p class="size">
+							<!--<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>-->
+							<span class="ft-12">规格</span><span class="goods-size text-active" style="color: #666666;text-decoration:none"  >{$vv.guige}</span>
+						</p>
+						<!--<p class="size">-->
+							<!--&lt;!&ndash;&lt;!&ndash;<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>&ndash;&gt;&ndash;&gt;-->
+							<!--<span style="font-size: 15px;" class="ft-12">选择数量</span>-->
+							<!--&lt;!&ndash;&lt;!&ndash;<input class="text-active" style="border: 1px solid #E7E8EB" type="text" name="number" id="number1{$vv.id}" value="1"/>&ndash;&gt;&ndash;&gt;-->
+							<!--&lt;!&ndash;<span class="text-active" id="number{$vv.id}"></span>&ndash;&gt;-->
+							<!--<button style="margin-right: 5px;" onclick="abc1({$vv.id})">－</button><span class="text-active" id="abc{$vv.id}">0</span><button style="margin-left: 5px;" onclick="abc2({$vv.id})">＋</button>-->
+						<!--</p>-->
+						<p class="size">
+							<!--<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>-->
+							<span class="ft-12">尺寸</span><span class="goods-size text-active" style="color: #666666;text-decoration: none" id="size4{$vv.id}" >{$vv.size}</span>
+						</p>
+						<input type="hidden" id="hidden{$vv.id}" value="{$vv.id}"/>
+						<if condition="$type eq 1">
+							<p><span class="ft-12">价格</span>: ￥<span id="mon{$vv.id}">{$vv.fee1}</span></p>
+							<input type="hidden" id="fee{$vv.id}" value="{$vv.fee1}"/>
+							<elseif condition="$type eq 2"/>
+							<p><span class="ft-12">价格</span>: ￥<span id="mon{$vv.id}">{$vv.fee2}</span></p>
+							<input type="hidden" id="fee{$vv.id}" value="{$vv.fee2}"/>
+							<elseif condition="$type eq 3"/>
+							<p><span class="ft-12">价格</span>: ￥<span id="mon{$vv.id}">{$vv.fee3}</span></p>
+							<input type="hidden" id="fee{$vv.id}" value="{$vv.fee3}"/>
+						</if>
+						<p class="size">
+							<!--<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>-->
+							<span class="ft-12">库存</span>
+							<span class="" >{$vv.kucun|default=0}</span>
+						</p>
+						<p class="size">
+							<!--<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>-->
+							<span class="ft-12">名称</span>
+							<span class="" >{$vv.title}</span>
+							<button onclick = "setKuCun({$vv.id})" style="margin-left:20px;border-radius:4px;padding:4px;border:1px solid black;">转移库存</button>
+							
+							<button onclick = "syzTiHuo({$vv.id},{$vv.kucun|default=0})" style="margin-left:0px;border-radius:4px;padding:4px;border:1px solid black;">提货</button>
+							
+						</p>
+						
+						
+						
+						<!--<p class="size">-->
+						<!--&lt;!&ndash;<span class="text-active" id="default1{$vv.id}" style="display: none">abc</span>&ndash;&gt;-->
+						<!--<span class="ft-12">数量</span>-->
+						<!--<input style="border: 1px solid #E7E8EB" type="text" name="number" id="number{$vv.id}" value=""/>-->
+						<!--</p>-->
+					</div>
+				</li>
+			</volist>
+			<div class="clear"></div>
+		</ul>
+		<div onclick="xjTihuo()" style="width:100%;text-align:center;">
+		<button style = "border:0px; border-radius:4px; padding:10px;margin-top:10px; width:70%;">下级提货记录</button>
+		</div>
+		<input type="hidden" id="one" value="{$bili.one}"/>
+		<input type="hidden" id="two" value="{$bili.two}"/>
+	</div>
+	<!--<a class="fixed fixed-bottom bottom-btn"  onclick="isLogin({$isLogin})">立即下单</a>-->
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var openid = "";
+ function setKuCun(shop_id) {
+     openid = layer.open({
+         type: 1,
+         skin: '', //加上边框
+         area: ['300px', '200px'], //宽高
+         content: '<div  style="margin-left: 0px;"><div >' +
+         '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p>商品数量</p>' +
+         '<input style="border-radius: 4px;border: 1px solid black;height: 25px;"  id="num" type="text" value=""/>' +
+		 '<br/>下级姓名:　<select id="userid" style="width:100px;height:25px;margin-top:10px;border-radius:4px;" name="user_id"><option value="-1">下级姓名</option><volist name="arr" id="vv"><option value="{$vv.id}">{$vv.name}</option></volist></select>' +
+         '<div class="" style="margin-top: 5px;">' +
+         '<button style="background:#44B549;border: 0px;border-radius: 4px; width: 70px;height: 20px;" type="submit" onclick="kucun('+shop_id+')" class="btn btn-default btn-default1" >确定</button>' +
+         '</div></div></div></div></div>'
+     });
+ }
+ 
+ //试用装提货
+ function syzTiHuo(shop_id,kucun){
+	openid = layer.open({
+         type: 1,
+         skin: '', //加上边框
+         area: ['300px', '200px'], //宽高
+         content: '<div  style="margin-left: 0px;"><div >' +
+         '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p>商品数量</p>' +
+         '<input style="border-radius: 4px;border: 1px solid black;height: 25px;"  id="syz_number" type="text" value=""/>' +
+         '<div class="" style="margin-top: 5px;">' +
+         '<button style="background:#44B549;border: 0px;border-radius: 4px; width: 70px;height: 20px;" type="submit" onclick="setSyzTh('+shop_id+','+kucun+')" class="btn btn-default btn-default1" >确定</button>' +
+         '</div></div></div></div></div>'
+     });
+ }
+ 
+ function setSyzTh(shop_id,kucun){
+	number = $('#syz_number').val();
+	 if(isNaN(number)){
+		layer.msg('请输入正确的数字')
+		return;
+	}
+	 if(number == ''){
+		layer.msg('请选择转移商品数量');
+		return;
+	 }
+	 if(number > kucun){
+		layer.msg('你的试用装库存不足');
+		return;
+	 }
+		
+	  location.href = "{:U('syzTiHuo')}?number=" + number + "&shop_id=" + shop_id;
+	 
+ }
+ 
+ function kucun(shop_id) {
+     var number = $('#num').val();
+	 var user_id = $('#userid').val();
+	 if(isNaN(number)){
+		layer.msg('请输入正确的数字')
+		return;
+	}
+	 if(number == ''){
+		layer.msg('请选择转移商品数量');
+		return;
+	 }
+	 if(user_id == -1){
+		layer.msg('请选择转移的下级姓名');
+		return;
+	 }
+	 $.ajax({
+		type:"post",
+		 url:"{:U('zhuanyiKuCun')}",
+		 dataType:"json",
+		 data:{
+			number:number,
+             user_id:user_id,
+			 shop_id:shop_id
+		 },
+		 success:function (data) {
+			if(data == 0){
+                layer.close(openid);
+                layer.msg('库存转移成功');
+				setTimeout(function(){
+					history.go(0);
+				},1000);
+                
+			}
+			if(data == -1){
+				layer.msg('你的库存不够，无法转移');
+			}
+			if(data == -2){
+				layer.msg('转移失败');
+			}
+         }
+	 });
+ }
+ 
+ function xjTihuo(){
+	location.href = "{:U('xjTihuo')}";
+ }
+
+</script>
+</html>

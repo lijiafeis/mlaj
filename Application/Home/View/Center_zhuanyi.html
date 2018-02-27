@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
+<style type="text/css">
+.select_box{width: 250px;margin: auto;margin-top: 30px;border: 1px #ccc solid;padding: 10px 0 10px 10px;box-sizing: border-box;}
+select{width: 165px;height: 30px;border: 0;outline: none;background: rgba(0,0,0,0);}
+.link_a{display: block; color: #fff;padding: 10px;background: #6CCDFF;text-align:center;border-radius: 4px;width: 150px;margin: auto;margin-top: 20px;}
+</style>
+</head>
+<body style="background: #f0f0f0;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home2/images/xiangzuo1.png"/></span>
+				<span>转移给直属</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	<div class="select_box" style="width:80%;border-radius:6px;text-align:center;">
+		<span>代理级别 : </span>
+		<select style="border:1px solid #C4C4C4;border-radius:6px;margin-left:10px;" name="name" id="name">
+			<volist name="userList" id="vv">
+			<option value="{$vv.id}">{$vv.name}</option>
+			</volist>
+		</select>
+	</div>
+	<a onclick="tihuo()" class="link_a" style="width:80%;">确定</a>
+</div>
+</body>
+<script src="__PUBLIC__/home2/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(function(){		
+		$(".info_3").click(function(){
+				$(".sel_3").slideDown("fast");
+				
+			})
+		$(".sel_3 li").click(function(){
+				$(".sel_3").slideUp("fast");
+				document.getElementById('input_3').value=this.innerHTML				
+			})
+	})
+</script>
+<script>
+	var i = 0;
+ 
+	function tihuo(){
+		if(i != 0){
+			layer.msg('正在处理');
+				return;
+		}
+		//获取user_id
+		user_id = $("#name").val();
+		i = i + 1;
+		$.ajax({
+			type: "POST",
+			url: "{:U('zhuanyibb')}",
+			dataType: "json",
+			data: {
+				user_id:user_id
+			},
+			success:function(data){
+				if(data == -1){
+					layer.msg('你的库存不足，无法转移');
+				}
+				if(data == 0){
+					layer.msg('转移成功');
+					setTimeout(function(){
+						history.go(-1);
+					},1000)
+					
+				}
+				if(data == -2){
+					layer.msg('未知错误');
+				}
+			}
+		});
+	}
+</script>
+</html>

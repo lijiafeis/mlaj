@@ -1,0 +1,786 @@
+[ 2017-03-08T04:58:12+08:00 ] 58.247.206.156 /index.php/Wxapi?signature=0da34037f180aa6e8f24c193974439307f570c69&timestamp=1488920292&nonce=605847617&openid=oDtCdwOjWAU14XsD8OZ74D5-FUHE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T05:43:52+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=9f58bddca08f2a2bdb94e127abb3f4bbea2a0633&timestamp=1488923032&nonce=1864453668&openid=oDtCdwHTFJIdhmqRrlmEt8Ul1TCQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T08:43:00+08:00 ] 115.60.199.238 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:03+08:00 ] 115.60.199.238 /wxapi/oauth/index.html?code=031FnWRq1jJv5q0pDBQq1gu2Sq1FnWRB&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwMpQaoRVz6h6MiXRIXwlLHg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T08:43:09+08:00 ] 180.153.214.189 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:10+08:00 ] 180.153.214.192 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-08T08:43:22+08:00 ] 42.51.159.84 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:22+08:00 ] 180.102.124.245 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:25+08:00 ] 180.102.124.245 /wxapi/oauth/index.html?code=041syXxb2c2MlS0x6OAb2RrRxb2syXx-&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwJxwEr0aWi6DLjwXWVNR7Qw' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `dx_user` (`openid`) VALUES ('oxpmdwJxwEr0aWi6DLjwXWVNR7Qw') [ RunTime:0.0000s ]
+
+[ 2017-03-08T08:43:31+08:00 ] 180.153.206.23 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2017-03-08T08:43:41+08:00 ] 180.153.81.212 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:41+08:00 ] 180.153.206.18 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:41+08:00 ] 180.163.2.116 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:41+08:00 ] 61.151.226.189 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:45+08:00 ] 101.226.65.108 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:43:51+08:00 ] 101.226.99.196 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/testpay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:45:01+08:00 ] 180.153.214.197 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/user_jl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T08:48:44+08:00 ] 112.65.193.14 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/help.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:00:32+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=0b58c54fb17a1daa623e5dc4f93ce22d4450ff20&timestamp=1488934832&nonce=728474663&openid=oDtCdwKeCAkwc2-lwKxc3kJJuO-g
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T09:09:07+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:09:13+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?code=0213WMKa2XO2jQ0sszHa2R02La23WMKX&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwDKxCsmGmo1OmcBcVk7AfNg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T09:09:17+08:00 ] 180.153.201.79 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:09:17+08:00 ] 180.153.214.200 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:09:44+08:00 ] 101.226.33.237 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:10:16+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T09:10:50+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?code=041WmUTU1dvaxS0tqkTU1VGdUU1WmUTX&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwDKxCsmGmo1OmcBcVk7AfNg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T10:06:51+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:06:56+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?code=001zp2200GEpJC1DEw000EG3200zp22W&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwDKxCsmGmo1OmcBcVk7AfNg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T10:22:19+08:00 ] 58.247.206.148 /index.php/Wxapi?signature=f96d22c311a83b824a8d8b1f59a9dc1c199bb7ef&timestamp=1488939739&nonce=1122188972&openid=oDtCdwAH369kVtlbvRJxWsCQtEv0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+
+[ 2017-03-08T10:47:37+08:00 ] 101.226.51.227 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:39+08:00 ] 101.226.33.205 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:40+08:00 ] 180.153.214.200 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:40+08:00 ] 180.153.211.172 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:40+08:00 ] 180.153.201.15 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:40+08:00 ] 61.151.226.199 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:41+08:00 ] 101.226.64.177 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:43+08:00 ] 101.226.66.173 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:43+08:00 ] 101.226.33.221 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:44+08:00 ] 101.226.33.224 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:47:46+08:00 ] 101.226.33.200 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:49:27+08:00 ] 101.226.65.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:52:43+08:00 ] 58.247.206.146 /Wxapi?signature=c08d88aa73f0c549233c19962ca0ec482d4a9bcd&timestamp=1488941563&nonce=1350403325&openid=oxpmdwDKxCsmGmo1OmcBcVk7AfNg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:59:09+08:00 ] 180.153.214.200 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:59:09+08:00 ] 101.226.33.224 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:59:09+08:00 ] 101.226.85.67 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T10:59:09+08:00 ] 101.226.33.223 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T11:41:53+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T11:42:19+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?code=001bhoE3157nCM1EiyF31qoHE31bhoEx&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwMpQaoRVz6h6MiXRIXwlLHg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T11:44:59+08:00 ] 112.65.193.14 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T12:34:55+08:00 ] 180.102.124.245 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T12:34:59+08:00 ] 180.102.124.245 /wxapi/oauth/index.html?code=011FEUk51HwGtP1jZXj514q7l51FEUkQ&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwJxwEr0aWi6DLjwXWVNR7Qw' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T12:49:01+08:00 ] 61.158.148.26 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T12:49:04+08:00 ] 61.158.148.26 /wxapi/oauth/index.html?code=031nWd6s0qdoFa14H13s0tS16s0nWd6Z&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwMpQaoRVz6h6MiXRIXwlLHg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T12:49:28+08:00 ] 61.158.152.8 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T12:49:35+08:00 ] 61.158.152.8 /wxapi/oauth/index.html?code=001fbIvR0pxGOb2WdRyR00GovR0fbIvc&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwFbpjHScwE0UpBJO6C7mK3A' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T14:23:57+08:00 ] 117.136.61.83 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T14:24:07+08:00 ] 117.136.61.83 /wxapi/oauth/index.html?code=00142s2M1EzyX1172ZZL1nbR2M142s2Q&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwHOD_VRZELZWvw1Zuiit6fE' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T15:00:22+08:00 ] 58.247.206.148 /index.php/Wxapi?signature=a56112d903e13dd685b10a3a1ec6f255ca242a88&timestamp=1488956421&nonce=378816320&openid=oDtCdwCJqg1yFTfqrJ3VYo0yUgXU
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T16:12:40+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=6ad8c41893e54c015c5465d7b012c3aad04d6c15&timestamp=1488960757&nonce=1247141737&openid=oDtCdwHcSwF0w-lDYzM0MnyoIdAw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T16:31:52+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T16:31:56+08:00 ] 123.151.42.52 /wxapi/oauth/index.html?code=031nchl92KDI0Q03RTl922Ibl92nchlC&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwDKxCsmGmo1OmcBcVk7AfNg' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T16:32:03+08:00 ] 117.185.27.113 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-08T16:32:03+08:00 ] 61.151.218.118 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-08T16:32:03+08:00 ] 101.226.33.217 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-08T16:32:03+08:00 ] 61.151.218.119 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-08T17:13:45+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=9dd013ef1453271f9851dee0d8cbd7c83a00775c&timestamp=1488964424&nonce=356946120&openid=oDtCdwDaBQZv6wVa8l5V9YlpIHrQ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T17:52:37+08:00 ] 58.247.206.156 /index.php/Wxapi?signature=72b83c3ab7e5e5147728ea7d42f4bf4249dabaab&timestamp=1488966756&nonce=298775288&openid=oDtCdwEToeB1C0_6k1zdYRdT2QcA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T18:07:31+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=4e879e05fadabbc6f18d3e899b531aef2b58b364&timestamp=1488967651&nonce=995197981&openid=oDtCdwIt7jlxnJfA0wQXEmsUK7EE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T18:17:23+08:00 ] 117.136.61.83 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T18:17:27+08:00 ] 117.136.61.83 /wxapi/oauth/index.html?code=051x3sgu05yL2d1N6Tfu088ggu0x3sgp&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwHOD_VRZELZWvw1Zuiit6fE' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T18:18:22+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T18:18:26+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?code=021k7Kzo1hbbQn0oh9Co1o80Ao1k7KzW&state=http%3A%2F%2Fdl.wannice.com%2Fhome%2Findex%2Findex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = 'oxpmdwHOD_VRZELZWvw1Zuiit6fE' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-03-08T19:58:04+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=5854a5f81a97b245fa0ffb694a012ad1c6e2697e&timestamp=1488974284&nonce=558661277&openid=oDtCdwAlfMxZbYAgQ9gK5dTzQqsk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T20:46:23+08:00 ] 58.247.206.148 /index.php/Wxapi?signature=e70ee832ca9db7f680856e599826341656260563&timestamp=1488977183&nonce=826567896&openid=oDtCdwNJiFdGbbwhzJGTTZ9C3pIY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T20:53:46+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:54:23+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:55:46+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:57:04+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:59:01+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:59:05+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T20:59:38+08:00 ] 123.151.38.94 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T21:04:40+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=d7981c633e458588f25cc0c4227fff60227aaf50&timestamp=1488978280&nonce=1424541874&openid=oDtCdwMvdPXViOHhzfCE_w00XWdg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T21:14:53+08:00 ] 58.247.206.153 /Wxapi?signature=309eb3007eda5a01e34b22c7d81211c5d79f6a55&timestamp=1488978893&nonce=1639695483&openid=oxpmdwA0qSGtDMKbbOXjmQ22eUF8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T21:14:54+08:00 ] 58.247.206.148 /Wxapi?signature=113acdeb4f1d9854ba8d3858d1bff486293c5a92&timestamp=1488978894&nonce=1361606212&openid=oxpmdwA0qSGtDMKbbOXjmQ22eUF8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T21:14:59+08:00 ] 58.247.206.158 /Wxapi?signature=d56f95315effc07021cde946f3d6dafa91fa8e5c&timestamp=1488978899&nonce=307714483&openid=oxpmdwA0qSGtDMKbbOXjmQ22eUF8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-08T21:19:31+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=c9430a96ead6601ce918a890e813c4da15f81a8a&timestamp=1488979171&nonce=560354436&openid=oDtCdwIHXVR9sBziMGGcxoUkoSME
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-08T21:37:58+08:00 ] 123.52.70.102 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE `openid` = null LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1048:Column 'openid' cannot be null
+ [ SQL语句 ] : INSERT INTO `dx_user` (`openid`) VALUES (NULL)
+ERR: 1048:Column 'openid' cannot be null
+ [ SQL语句 ] : INSERT INTO `dx_user` (`openid`) VALUES (NULL)
+

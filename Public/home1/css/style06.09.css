@@ -1,0 +1,498 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	height: 100%;
+}
+
+.wrap {
+	max-width: 640px;
+	min-width: 320px;
+	margin: auto;
+	font-family: "微软雅黑";
+	font-size: 15px;
+	color: #000;
+	background: #f8f8f8;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.header-top {
+	height: 40px;
+}
+
+.fixed {
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	z-index: 3;
+	margin: 0 auto;
+}
+
+.fixed-top {
+	top: 0;
+	/*border-bottom: 1px #f0f0f0 solid;*/
+}
+
+.fixed-top .head {
+	background: #6CCDFF;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	color: #fff;
+}
+
+.fixed-top .head .l-icon {
+	float: left;
+	margin-top: -1px;
+}
+
+.fixed-top .head .l-icon img {
+	width: 15px;
+	vertical-align: middle;
+}
+
+.fixed-top .head .r-icon {
+	float: right;
+}
+
+.fixed-top .head .r-icon img {
+	width: 20px;
+	vertical-align: middle;
+}
+
+.fixed-bottom {
+	bottom: 0;
+}
+
+input {
+	border: 0;
+	outline: none;
+	font-family: "Microsoft YaHei"
+}
+
+/*****************************我的奖金********************************/
+.my_bonuse_box {
+	background: #fff;
+	padding: 20px 0;
+}
+
+.my_bonuse_box .jin_e_l {
+	font-size: 30px;
+	color: #6CCDFF;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.color1 {
+	color: #6CCDFF;
+}
+
+.my_bonuse_box .l_bonuse {
+	float: left;
+	text-align: center;
+	width: 50%;
+	border-right: 1px #f0f0f0 solid;
+	box-sizing: border-box;
+}
+
+.my_bonuse_box .r_bonuse {
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+
+.total_team {
+	padding: 10px;
+}
+
+.yeji_box {
+	background: #fff;
+}
+
+.yeji_box .yeji_infor {
+	padding: 10px;
+	border-bottom: 1px #f0f0f0 solid;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.yeji_box .tx {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.yeji_box .r_infor {
+	flex: 3;
+	margin-top: 5px;
+}
+
+.yeji_box .r_img {
+	width: 35px;
+	margin-top: -10px;
+}
+/**********************我的钱包****************************/
+.color1 {
+	color: #6CCDFF;
+}
+
+.r_tx {
+	float: right;
+	display: block;
+}
+
+.r_tx #tx {
+	padding: 2px 5px;
+	border: 1px #fff solid;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 12px;
+}
+
+.tabs_2 {
+	padding: 10px 0;
+	border-bottom: 1px #EDEDEE solid;
+}
+
+.tabs_2 .tab {
+	float: left;
+	width: 50%;
+	text-align: center;
+	border-right: 1px #CECECE solid;
+	box-sizing: border-box;
+}
+
+.tabs_2 .tab:nth-of-type(2n) {
+	border-right: 0;
+}
+
+.jin_e_color1 {
+	font-size: 30px;
+	color: #6CCDFF;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.btns_2 {
+	padding: 20px 50px;
+}
+
+.btns_2 .btn {
+	width: 45%;
+	padding: 10px 0;
+	font-size: 13px;
+	color: #000;
+	text-align: center;
+	border-radius: 2px;
+	border: 1px #6CCDFF solid;
+}
+
+.hit {
+	background: #6CCDFF;
+	color: #fff;
+}
+
+.jl_list_wrap {
+	padding: 10px;
+}
+
+.jl_list_wrap .title {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+.jl_list_wrap .jl_list {
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+.jl_list_wrap .top {
+	padding: 10px;
+	border-bottom: 1px #f8f8f8 solid;
+}
+
+.jl_list_wrap .date {
+	float: right;
+	color: #5A5A5A;
+}
+
+.jl_list_wrap .order_infor {
+	padding: 10px;
+}
+
+.jl_list_wrap .order_infor .sum {
+	font-size: 16px;
+}
+
+.jl_list_wrap .order_infor .sum span {
+	font-size: 18px;
+}
+
+.jl_list_wrap .order_infor .order_num {
+	font-size: 13px;
+	margin-top: 10px;
+}
+/******************我要升级************************/
+
+.input-box {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.input-box select{
+	border: 0;
+	outline: none;
+	border: 1px #ccc solid;
+	width: 200px;
+}
+.input-box .input-wrap {
+	border: 1px #ccc solid;
+	display: table;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+.input-box .input-wrap .input-wrap-addon {
+	border: 0;
+	outline: none;
+	background: rgba(0,0,0,0);
+	width: 1%;
+	white-space: nowrap;
+	display: table-cell;
+	padding: 12px 10px;
+	box-sizing: border-box;
+}
+
+.input-box .input-wrap input {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: "Microsoft YaHei";
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.input-box h4 {
+	margin: 10px 0;
+}
+
+.input {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: "Microsoft YaHei";
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+	border: 1px #ccc solid;
+}
+
+textarea {
+	border: 0;
+	outline: none;
+	display: block;
+	border: 1px #ccc solid;
+	border-radius: 4px;
+	width: 100%;
+	padding: 6px 12px;
+	font-family: "Microsoft YaHei";
+	box-sizing: border-box;
+	height: 50px;
+}
+
+.info {
+	background: #fff;
+	border: 1px #ccc solid;
+	padding: 12px 10px;
+	border-radius: 4px;
+}
+
+.info input {
+	float: left;
+	border: 0;
+	outline: none;
+}
+
+.icon-angle-down ,.icon-angle-up {
+	float: right;
+	margin-top: 3px;
+	font-size: 20px;
+}
+
+.down {
+	float: right;
+				/*margin-top: 2px;*/
+	transform: rotate(0deg);
+}
+
+.up {
+	transform: rotate(180deg);
+}
+
+.info-content {
+	border: 1px #ccc solid;
+	background: #fff;
+	border-radius: 0 0 4px 4px;
+	border-top: 0;
+	padding-left: 10px;
+	display: none;
+	box-sizing: border-box;
+}
+
+.info-content li {
+	line-height: 3;
+}
+
+input {
+	font-family: "Microsoft YaHei"
+}
+
+body {
+	line-height: 1.6;
+}
+
+.infor_box {
+	border: 1px #ccc solid;
+	border-radius: 4px;
+	/*background: #fff;*/
+	padding: 10px;
+	padding-top: 0;
+	color: #000;
+	line-height: 2.5;
+}
+
+.info {
+	padding: 2px 10px;
+}
+
+#update_btn {
+	padding: 6px;
+	display: block;
+	margin: 20px 10px;
+	background: #6CCDFF;
+	color: #fff;
+	text-align: center;
+}
+
+.weui-uploader__input-box {
+	border: 1px #ff6363 solid;
+}
+
+.text_col {
+	color: #666;
+}
+
+.beizhu {
+	display: flex;
+}
+
+.bz_text {
+	flex: 3;
+	margin-left: 5px;
+}
+
+.bz_text textarea {
+	width: 100%;
+}
+
+.tips {
+	padding: 10px;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
+.date_time {
+	margin-bottom: 8px;
+}
+
+.date_time input,.zfb input {
+	width: 65%;
+}
+
+.jin_e input {
+	width: 74%;
+}
+
+.select_wrap {
+	position: relative;
+	margin-left: 5px;
+}
+
+.select_wrap ul {
+	position: absolute;
+	top: 26px;
+	left: 0;
+	width: 100%;
+}
+
+input {
+	background: rgba(0,0,0,0);
+}
+
+.up_wrap {
+	background: #fff;
+	position: relative;
+}
+
+.up_file {
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	opacity: 0;
+}
+
+.up_bg {
+	line-height: 2;
+	background: #f2f2f2;
+	width: 110px;
+	height: 110px;
+	z-index: 1;
+	text-align: center;
+}
+
+.up_bg img {
+	width: 50px;
+	height: 50px;
+	margin-top: 18px;
+}		

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<!--<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>积分</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>-->
+	<div class="col_goods">
+		<ul class="goods_2">
+			<volist name="data" id="vv">
+			<li>
+				<img src="{$vv.img_url}"/>
+				<span class="text-active" style="display: none">{$vv.id}</span>
+				<div class="goods-info" id="shop{$vv.id}">
+					<p class="number">
+						<span class="ft-12">数量</span>:<span class="goods-num" id="d{$vv.id}">单片</span>
+						<span class="goods-num" id="s{$vv.id}">双片</span>
+						<span class="goods-num" id="b{$vv.id}">包</span>
+					</p>
+					<p class="size">
+						<span class="ft-12">尺码</span>:<span class="goods-size " id="size0{$vv.id}">{$vv.size0}</span>
+						<if condition="$vv.size1 neq null">
+						<span class="goods-size" id="size1{$vv.id}">{$vv.size1}</span>
+						</if>
+						<if condition="$vv.size2 neq null">
+							<span class="goods-size" id="size2{$vv.id}">{$vv.size2}</span>
+						</if>
+						<if condition="$vv.size3 neq null">
+							<span class="goods-size" id="size3{$vv.id}">{$vv.size3}</span>
+						</if>
+						<if condition="$vv.size4 neq null">
+							<span class="goods-size" id="size4{$vv.id}">{$vv.size4}</span>
+						</if>
+					</p>
+					<p><span class="ft-12">价格</span>: ￥{$vv.fee3}</p>
+				</div>
+			</li>
+			</volist>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<a class="fixed fixed-bottom bottom-btn"  onclick="isLogin({$isLogin})">立即下单</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function(){
+        $('.goods-num').click(function(){
+            if($(this).hasClass('text-active')){
+                $(this).removeClass('text-active');
+            }else{
+                $(this).addClass('text-active').siblings().removeClass('text-active');
+            }
+
+        });
+        $('.goods-size').click(function(){
+            if($(this).hasClass('text-active')){
+                $(this).removeClass('text-active');
+            }else{
+                $(this).addClass('text-active').siblings().removeClass('text-active');
+            }
+        })
+    })
+	function isLogin(flag) {
+		if(flag == 1){
+            layer.msg('请到个人中心购买商品');
+		    setTimeout(function () {
+                location.href = "{:U('Center/index')}";
+            },1000);
+		    return;
+		}
+
+		setOrder();
+    }
+    function setOrder() {
+	    var data = [];
+        jQuery('.text-active').each(function(key,value){
+//            data = data + ',' + $(this).text();
+            data[key] =  $(this).text();
+            //或者也可以这么写：
+
+            // btns[key] = $(value).val();
+        });
+    }
+</script>
+</html>

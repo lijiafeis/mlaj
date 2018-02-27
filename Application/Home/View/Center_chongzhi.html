@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>充值</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="">
+		<tr>
+			<td>时间</td>
+			<td>金额</td>
+			<td>积分是否到账</td>
+		</tr>
+		<volist name="data" id="vv">
+		<tr>
+			<td>{$vv.time}</td>
+			<td>￥{$vv.money}元</td>
+			<if condition="$vv.type eq 0">
+				<td>没到账</td>
+				<else/>
+				<td>已到账</td>
+			</if>
+		</tr>
+		</volist>
+	</table>
+	<a class="fixed fixed-bottom bottom-btn" href="{:U('czJf')}">立即充值</a>
+</div>
+</body>
+</html>

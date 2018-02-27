@@ -1,0 +1,652 @@
+[ 2017-04-28T14:39:04+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0130s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:18:08+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:index
+
+[ 2017-04-28T15:19:44+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index
+
+[ 2017-04-28T15:21:27+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:index
+
+[ 2017-04-28T15:21:54+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0030s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0030s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:22:14+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:22:16+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:22:17+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:22:19+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:22:20+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:22:21+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:22:26+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:23:50+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:28:43+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:29:03+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:29:32+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:35:18+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:35:19+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:27+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:28+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:29+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0020s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-28T15:36:30+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:31+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:31+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:36:32+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T15:36:32+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:36:33+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-28T15:40:34+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-28T15:47:39+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-28T18:13:25+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0080s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0080s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-28T18:15:37+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `old`='20000' WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 4 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='70000' WHERE `id` = 4 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 8 [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `old`='100000' WHERE `id` = 8 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

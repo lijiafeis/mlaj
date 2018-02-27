@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home1/css/style06.09.css"/>
+<style>
+.tips{font-size: 14px;}
+.border{padding:8px 10px;border-bottom: 1px #ccc solid;}
+#update_btn{padding: 10px;}
+</style>
+</head>
+<body style="background: #fff;">
+<div class="wrap" style="background: #fff;">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home1/images/xiangzuo1.png"/></span>
+				<span>我要充值</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>		
+	<form action="{:U('setChongzhi')}" method="post" style="padding:10px;" onsubmit="return checkInfo()" enctype="multipart/form-data">
+		<div class="infor_box" style="padding: 0;padding-bottom: 10px;">
+			<div class="border">现在等级 : <span class="text_col">{$type}</span></div>
+			
+				
+			<div  class="border">打款方式 : 
+				<span class="text_col">
+					<select class="" id="sel" name="type"  onChange="ShowHidden();" style="border: 0;border-radius:6px;height:25px;outline: none;border: 1px #ccc solid;width: 200px;height:30px;">
+			            <option value="zfb" >支付宝</option>             	
+			            <option value="bank" >银行卡</option>             
+			        </select>
+				</span>
+			</div>	
+	        <div class="border" id="ShowHidden_1" style="display: block;" > 
+	             <label>支付宝账号 :</label> 
+	             <input type="text" class="form-control" name="alipay" value="" id="" placeholder="请输入支付宝账号">
+	        </div>
+	        <div class="border" id="ShowHidden_2" style="display: none;"> 
+	             <label>银行卡号</label> 
+	             <input type="text" class="form-control" name="bank" value="" id="" placeholder="请输入银行卡号">
+	        </div>
+	        			
+			<div class="jin_e border">金额 : <input type="" name="money" id="money" value="" placeholder="请输入您需支付的金额"/></div>
+			<div class="date_time border">日期 : <input type="" name="time" onclick="laydate({istime: true, format: 'YYYY-MM-DD'});" id="time" value="" placeholder="请选择日期" readonly="readonly"/></div>
+			<div class="beizhu border" style="display: flex;">
+				<div>备注 :</div>
+				<div class="bz_text"><textarea name="content" rows="" cols="" placeholder="级别+积分+保证金" style="border: 0;margin-top: 4px;"></textarea></div>
+			</div>
+			<div style="padding-left: 10px;">请上传打款凭证<!--<br/>(1～2张)--></div>
+			<div class="beizhu " style="margin-left: 10px;">								
+				<!--<div class="up_wrap" >
+					<div class="up_bg">						
+						<img src="__PUBLIC__/home1/images/cameral.png"/>
+						<div style="color: #a8a8a8;">上传图片</div>						
+					</div>
+					
+					<input class="up_file" type="file" name="" id="" value=""/>
+				</div>-->
+				<input type="file" name="file" id="" value="" style=""/>
+			</div>
+		</div>
+		<div class="tips">
+			<p>请打款至 :</p>
+			<p id="a" style="display:block">支付宝账号 : 2238525793@qq.com</p>
+			<p id="b" style="display:none">中信银行卡号 : 6217 7106 0059 5169</p>
+			<p>如有问题可联系微信客服 : milove8</p>
+		</div>
+		<!-- <input type="submit" id="update_btn" value="确认充值"> -->
+		<div style="padding: 20px 30px;">
+			<input type="submit" name="" id="update_btn" value="确认充值" style="width: 100%;background: #6CCDFF;color: #fff;padding: 10px;border-radius:6px;box-sizing: border-box;text-align: center;font-size: 15px;"/>
+		</div>
+	</form>
+	
+</div>
+</body>
+<script src="__PUBLIC__/admin/laydate/laydate.js"></script>
+<script src="__PUBLIC__/home1/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+	function checkInfo(){
+		money = $('#money').val();
+		time = $('#time').val();
+		if(money == ''){
+			layer.msg('请输入金额');
+			return false;
+		}else if(time == ''){
+			layer.msg('请选择日期');
+			return false;
+		}
+		return true;
+	}
+
+	function ShowHidden(){
+		
+		var obj = document.getElementById("sel");
+		var txtShowHidden = document.getElementById("ShowHidden_1"); 
+		var txtShowHidden_1 = document.getElementById("ShowHidden_2");
+		var a = document.getElementById("a");
+		var b = document.getElementById("b");
+		if (obj.value == "zfb")
+		{
+		txtShowHidden.style.display = "block";
+		//a.style.display = "block";
+		//b.style.disabled = "none";
+		}
+		else
+		{
+		//alert('a');
+		txtShowHidden.style.display = "none";
+		//a.style.disabled = "none";
+		//b.style.disabled = "block";
+		}
+		if (obj.value == "bank")
+		{
+		txtShowHidden_1.style.display = "block";
+		//b.style.disabled = "none";
+		//a.style.disabled = "block";
+		}
+		else
+		{
+		txtShowHidden_1.style.display = "none";
+		//b.style.disabled = "block";
+		//a.style.disabled = "none";
+		}
+	}
+	
+	$("#sel").change(function(){
+	//alert('afsd');
+		val = $("#sel").val();
+		if(val == "zfb"){
+		//alert('afsd');
+			//b.style.disabled = "none";
+			//a.style.disabled = "block";
+			$("#a").css('display','block');
+			$("#b").css('display','none');
+		}else{
+			//b.style.disabled = "block";
+			//a.style.disabled = "none";
+			$("#a").css('display','none');
+			$("#b").css('display','block');
+		}
+	});	
+  				
+</script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" style="background:#6CCDFF">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>我的订单</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	
+	<div class="order-box panes">
+		<div class="pane">
+			<volist name="data" id="vv">
+			<div class="order-list">
+				<div class="name">订单号:{$vv.time} <span style="margin-left:30px;">{$vv.time|date="Y-m-d H:i:s",###}</span></div>
+				
+				<div class="info-box">
+					<div class="info">
+						<div class="goods-image">
+							<img style="width:60px;height:60px;" src="{$vv.pic_url}"/>
+						</div>
+						<div class="r-info">
+							<div><span><span class="ft-12">价格</span>:{$vv.shopmoney}&nbsp</span><span> <span class="ft-12"></span></span><span> <span class="ft-12">商品</span>:{$vv.shop_name}</span></div>
+							<!--<div class="num-box">
+								<input class="min" type="" name="" id="" value="-" readonly="readonly"/>
+								<input type="" name="" id="" value="1" />
+								<input class="add" type="" name="" id="" value="+" readonly="readonly"/>
+							</div>-->
+						</div>
+					</div>
+					<div class="order-btn">
+						<a class="ft-12" style="background:#6CCDFF" href="{:U('xiangqing')}?order_id={$vv.id}">查看详情</a>
+					</div>
+				</div>
+			</div>
+		</volist>
+		</div>
+		<div class="pane" id="list3">
+		</div>
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function(){	
+		$('.tab').click(function(){
+			$(this).addClass('active-color').siblings().removeClass('active-color');
+			$('.panes>.pane:eq('+$(this).index()+')').show().siblings().hide();
+		})
+	})
+    function list1() {
+        $('#list2').html('<div style="text-align:center;margin-top:30px;"><img src="__PUBLIC__/admin/images/loading.gif" width="60px" ></div>');
+        $('#list2').load("{:U('ketihuo')}",function(){});
+
+
+    }
+
+    function list2() {
+		//alert('a');
+        $('#list3').html('<div style="text-align:center;margin-top:30px;"><img src="__PUBLIC__/admin/images/loading.gif" width="60px" ></div>');
+        $('#list3').load("{:U('yifahuo')}",function(){});
+
+    }
+
+    function daixiadan() {
+		location.href = "{:U('order')}";
+    }
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home1/css/style06.09.css"/>
+</head>
+<body style="background: #fff;">
+<div class="wrap" style="background: #fff;">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon"><img src="__PUBLIC__/home1/images/xiangzuo1.png"/></span>
+				<span>我要升级</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>		
+	<form action="{:U('setChongzhi')}" method="post" style="padding:10px;" enctype="multipart/form-data">
+		<div class="infor_box" style="border:1px solid #000">
+			<div>现在等级 : <span class="text_col">{$type}</span></div>
+			
+			
+			
+			
+			<div>打款方式 : 
+				<span class="text_col">
+					<select class="" id="sel" name="type" onChange="ShowHidden();" style="border: 0;border-radius:4px;height:25px; outline: none;border: 1px #ccc solid;width: 200px;">             	
+			            <option value="zfb" >支付宝</option>             	
+			            <option value="bank" >银行卡</option>             
+			        </select>
+				</span>
+			</div>	
+	        <div class=" " id="ShowHidden_1" style="display: block;" > 
+	             <label>支付宝账号 :</label> 
+	             <input type="text" class="form-control" name="alipay" value="" id="" placeholder="请输入支付宝账号"> 
+	        </div>
+	        <div class=" " id="ShowHidden_2" style="display: none;"> 
+	             <label>银行卡号</label> 
+	             <input type="text" class="form-control" name="bank" value="" id="" placeholder="请输入银行卡号"> 
+	        </div>
+	        			
+			<div class="jin_e">金额 : <input type="" name="money" id="" value="" placeholder="请输入您需支付的金额"/></div>
+			<div class="date_time">日期 : <input type="" name="time" id="" onclick="laydate({istime: true, format: 'YYYY-MM-DD'});" value="" placeholder="请选择日期" readonly="readonly"/></div>		
+			<div class="beizhu" style="display: flex;">
+				<div>备注 :</div>
+				<div class="bz_text"><textarea name="content" rows="" cols="" placeholder="级别、贷款、保证金"></textarea></div>
+			</div>
+			<div style="margin-top: 10px;">
+				<p>请上传打款凭证<!--<br/>(1～2张)--></p>
+				
+				<div class="up_wrap">
+					<div class="up_bg">						
+						<img src="__PUBLIC__/home1/images/cameral.png"/>
+						<div style="color: #a8a8a8;">上传图片</div>						
+					</div>
+					
+					<input class="up_file" type="file" name="file" id="" value=""/>
+				</div>
+			</div>
+
+		</div>
+	
+		<div class="tips">
+			<p>请打款至 :</p>
+			<p>支付宝账号 : 123456789</p>
+			<p>如有问题可联系微信客服 : 123456</p>
+		</div>
+		<input  type="submit" style="width:80%;" id="update_btn" value="确认升级"/>
+	</form>
+</div>
+</body>
+<script src="__PUBLIC__/admin/laydate/laydate.js"></script>
+<script src="__PUBLIC__/home1/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function ShowHidden()
+			{
+			var obj = document.getElementById("sel");
+			var txtShowHidden = document.getElementById("ShowHidden_1"); 
+			var txtShowHidden_1 = document.getElementById("ShowHidden_2");
+			if (obj.value == "zfb")
+			{
+			txtShowHidden.style.display = "block";
+			}
+			else
+			{
+			txtShowHidden.style.display = "none";
+			}
+			if (obj.value == "bank")
+			{
+			txtShowHidden_1.style.display = "block";
+			}
+			else
+			{
+			txtShowHidden_1.style.display = "none";
+			}
+		}
+  				
+</script>
+</html>

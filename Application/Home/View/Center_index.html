@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/reset.css"/>
+<style>
+html,body{height:100%;}
+.user_wrap{height: 100%;background: url(__PUBLIC__/home/images6/user_bg2.png);background-size: 100%;}
+.fixed_box{position: fixed;bottom: 0;left: 0;right: 0;max-width: 640px;margin: auto;}
+.col_icon3{font-size:16px;}
+.col_icon3 a{float: left;width: 33.33%;text-align: center;color: #fff;padding: 20px 0;border-top: 1px #fff solid;border-right: 1px #fff solid;box-sizing: border-box;}
+.col_icon3 a:nth-of-type(3n){border-right: 0;}
+.col_icon3 a img{width: 30px;height: 30px;}
+.logo_wrap{padding-top: 30px;}
+.logo_wrap #logo{width: 100%;display: block;text-align: center;}
+.fixed_box .userinfor{width:100%;padding-right:10px;box-sizing:border-box;}
+.fixed_box .headerimg{text-align: center;width:25%;float:left;}
+.fixed_box .headerimg img{width: 50px;height: 50px;border-radius: 50%;}
+.fixed_box .centerinfor{text-align: center;font-size: 13px;color: #fff;height: 50px;line-height: 50px;width:50%;float:left;}
+.fixed_box .sj{text-align: right;margin-bottom:-10px;width:25%;float:left;}
+.fixed_box .sj img{width: 30px;}
+.fixed_box  strong{color: red;}
+.clear{clear:both;}
+</style>
+</head>
+<body>
+<div class="wrap user_wrap">	
+	<div class="logo_wrap">
+		<img id="logo" src="__PUBLIC__/home/images6/logo1.png"/>		
+	</div>
+	<div class="fixed_box">
+		<div class="userinfor">
+			<div class="headerimg"><img src="{$headimgurl}"/></div>
+			<div class="centerinfor"><span style="color:#000;">{$data.name}:</span>
+				<if condition="$data.type eq 1">
+					<strong>总代</strong>
+					<elseif condition="$data.type eq 2"/>
+					<strong>特级</strong>
+					<elseif condition="$data.type eq 3"/>
+					<strong>一级</strong>
+					<elseif condition="$data.type eq 4"/>
+					<strong>初级</strong>
+				</if>				
+			<span class="infor2"><span style="color:#000;">业绩:</span> <strong>{$jifen|default=0}</strong></span>
+			</div>
+			<div class="sj" onclick="shengji()"><img src="__PUBLIC__/home/images6/sj.png"/></div>	
+			<div class="clear"></div>
+		</div>		
+		<div class="col_icon3">
+			
+			<a href="{:U('wodeqianbao')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic1.png"/>
+				<div>钱包</div>
+			</a>
+			<a href="{:U('Center/yongjinList')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic2.png"/>
+				<div>奖金</div>
+			</a>
+			<a href="{:U('Center/xiaji')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic3.png"/>
+				<div>团队</div>
+			</a>
+			<a href="{:U('Center/shop')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic4.png"/>
+				<div>进货</div>
+			</a>
+			<a href="{:U('Url/dingdan')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic5.png"/>
+				<div>云仓订单</div>
+			</a>
+			
+			<a href="{:U('Center/yifahuo1')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic6.png"/>
+				<div>提货订单</div>
+			</a>
+			<a href="{:U('Center/setUrl')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic7.png"/>
+				<div>授权</div>
+			</a>
+			
+			<a href="{:U('Center/shopKuCun')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic8.png"/>
+				<div>我的云仓</div>
+			</a>
+			<a href="{:U('Url/shezhi')}">
+				<img src="__PUBLIC__/home/images6/icon_user/pic9.png"/>
+				<div>设置</div>
+			</a>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>		
+</body>
+<script>
+	function shengji(){
+		location.href = "{:U('shengji')}";
+	}
+</script>
+</html>

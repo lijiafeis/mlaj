@@ -1,0 +1,26 @@
+
+		<volist name="data" id="vv">
+			<div class="order-list">
+				<div class="name">{$vv.time|date="Y-m-d H:i:s",###}</div>
+				<div class="info-box">
+					<div class="info">
+						<div class="goods-image">
+							<img src="__PUBLIC__/home/images5/banner3.png"/>
+						</div>
+						<div class="r-info">
+							<div><span><span class="ft-12">价格</span>:{$vv.shopmoney}积分</span><span> <span class="ft-12"></span></span><span> <span class="ft-12">商品数量</span>:{$vv.count}</span></div>
+							<!--<div class="num-box">
+								<input class="min" type="" name="" id="" value="-" readonly="readonly"/>
+								<input type="" name="" id="" value="1" />
+								<input class="add" type="" name="" id="" value="+" readonly="readonly"/>
+							</div>-->
+						</div>
+					</div>
+					<div class="order-btn">
+						<a class="ft-12" href="{:U('xiangqing')}?order_id={$vv.id}">查看详情</a>
+					</div>
+				</div>
+			</div>
+		</volist>
+
+

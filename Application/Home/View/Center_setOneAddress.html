@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/weui.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+</head>
+<body>
+<div class="wrap user-center">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>添加收货地址</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<div class="add-sh-wrap">
+		<div class="input">
+			<span>收货人</span>
+			<input style="width: 100%" type="" name="name" id="name" value=""/>
+		</div>
+		<div class="input">
+			<span>联系电话</span>
+			<input style="width: 100%" type="" name="tel" id="tel" value="" />
+		</div>
+	</div>
+	<!--<div class="weui-panel__ft">-->
+		<!--<a href="" class="weui-cell weui-cell_access weui-cell_link border-bottom" style="padding: 10px;">		   -->
+		    <!--<div class="weui-cell__bd">所在地区</div>-->
+		    <!--<span class="weui-cell__ft  text-over">请选择</span>-->
+		<!--</a>    -->
+	<!--</div>-->
+	<!--<div class="weui-panel__ft">-->
+		<!--<a href="" class="weui-cell weui-cell_access weui-cell_link border-bottom" style="padding: 10px;">		   -->
+		    <!--<div class="weui-cell__bd">街道</div>-->
+		    <!--<span class="weui-cell__ft text-over">请选择</span>-->
+		<!--</a>    -->
+	<!--</div>-->
+	<div class="details-addr">
+		<span>详细地址</span>
+		<input style="width: 100%" type="" name="address" id="address" value=""/>
+	</div>	
+	<a  class="s-btn" onclick="setAddress('{$data}')">保 存</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function setAddress(data) {
+		var name = $('#name').val();
+		var tel = $('#tel').val();
+		var address = $('#address').val();
+		$.ajax({
+            type: "POST",
+            url: "{:U('setOneAddress')}",
+            dataType: "json",
+            data: {
+                name:name,
+				tel:tel,
+				address:address,
+				data:data
+            },
+            success: function(json){
+				if(json['flag'] == 0){
+				    layer.msg('添加成功');
+				    setTimeout(function () {
+						location.href = "{:U('setOrder')}?data=" + json['data'];
+                    },1000);
+				}
+				if(json['flag'] == 1){
+				    layer.msg('添加失败');
+				}
+                if(json['flag'] == -1){
+                    layer.msg('你已添加过');
+                }
+            }
+
+		});
+    }
+</script>
+</html>

@@ -1,0 +1,82 @@
+.fixed{position: fixed;width: 100%;max-width: 640px;min-width: 320px;z-index: 3;}
+.fixed-top{top: 0;}
+.fixed-top .nav{background: #3cc5f1;text-align: center;height: 40px;line-height: 40px;padding: 0 10px;color: #fff;}
+.fixed-top .nav .l-icon{float: left;margin-top: -1px;}
+.fixed-top .nav .l-icon img{width: 15px;vertical-align: middle;}
+.fixed-top .nav .r-icon{float: right;}
+.fixed-top .nav .r-icon img{width: 20px;vertical-align: middle;}
+
+/*登录*******************************************
+ *******************登录******************/	
+.fixed-top .text{height: 40px;text-align: center;line-height: 40px;}
+.login-wrap{margin-top: 40px;padding: 20px;border-top: 1px #E5E5E5 solid;}
+.login-wrap .user-info{text-align: center;}
+.login-wrap .user-info .user-img{width:60px;display: block;margin: auto;}
+.login-wrap .user-info .user-img .user-name{color: #000;font-size: 12px;margin-top: 5px;}
+.login-form{border: 1px #E5E5E5 solid;padding: 0 10px;}
+.login-form .input-wrap{height: 40px;line-height: 40px;border-bottom: 1px #E5E5E5 solid;}
+.login-form .input-wrap input{border: 0;outline: none;}
+.login-form .input-wrap:last-child{border-bottom: 0;position: relative;}
+.login-form .input-wrap .yzm{font-size: 12px;background: #36AEFE;position: absolute;right: 0;top:7px;height:24px;line-height: 24px;padding: 0 5px;color:#fff;border-radius:3px;}
+body{color: #000;letter-spacing: 0;background: #fff;}
+.login-wrap .text{color: #000;font-size: 12px;margin: 20px 0;}
+.btn{height: 40px;line-height: 40px;background: #36AEFE;text-align: center;color: #999;margin-top: 20px;color: #fff;border-radius: 4px;}
+.link-a1{border: 1px #000 solid;color: #2e2e2e;margin-top: 30px;box-sizing: border-box;background: rgba(0,0,0,0);}
+.link{display: block; height: 40px;line-height: 40px; text-align: center;border-radius: 4px;}
+
+/*首页*******************************************
+ *******************首页******************/
+article{display: block;position: relative;width: 100%;margin-top: 40px;}
+article i{position: absolute;left: 0;bottom: 0;width: 100%;background: rgba(0,0,0,0.3);color: #fff;font-size: 12px;font-style: normal;line-height: 1.3;padding: 10px 0;}
+article i p{margin-left: 10px;line-height:1.5;margin-right: 10px;}
+.image-block{width: 100%;display: block;}
+.a-group{padding: 50px 10px 0;}
+.link{display: block; height: 40px;line-height: 40px;text-align: center;border-radius: 4px;}
+.link-a{border: 1px #ccc solid;color: #2e2e2e;box-sizing: border-box;margin-bottom: 10px;background: #fff;}	
+.margintop40{margin-top:40px;}
+.btn-2{padding: 10em 30px 30px;}
+.btn-2 span{width: 120px;height: 40px;text-align: center;line-height: 40px;color: #fff;border-radius: 4px;}
+.btn-2 .l-btn{float: left;background: #F38631;}
+.btn-2 .r-btn{float: right;background: #ccc;}
+
+/*问题列表*******************************************
+ *******************问题列表******************/
+picture{display: block;position: relative;width: 100%;}
+.image-block{width: 100%;display: block;}
+.image-block{width: 100%;display: block;}
+.box{padding: 15px;}
+.picture-wrap{padding: 10px;background: #fff;border: 1px #e5e5e5 solid;margin-bottom: 10px;}
+.picture-wrap .title{background: rgba(0,0,0,0.5);width: 100%;margin-top: 15px;color: #fff;}
+.picture-wrap .title p{padding: 10px;}
+.margintop40{margin-top: 40px;}
+
+/*开始答题*******************************************
+ *******************开始答题******************/
+
+.picture-wrap{padding: 10px;background: #fff;border: 1px #e5e5e5 solid;margin-bottom: 10px;}
+.picture-wrap div.tit{text-align: center;}
+.picture-wrap div.con{padding: 30px;border-bottom: 1px #f0f0f0 solid;}
+.btn1{background: #3CC5F1;margin-top: 10px;}
+
+.content{background: #fff;}
+.content .ques{height: 40px;line-height: 40px;text-align: center;border-bottom:1px #f0f0f0 solid ;font-size: 12px;}
+.content .answer{padding: 10px;}
+.correct{background:#8fd05c;border: 0;color: #fff;}
+.error{background:#FB9F94;border: 0;color: #fff;}
+
+#dialog1,#dialog2{display: none;}
+.weui_dialog{border-radius: 5px;max-width: 640px;min-width: 300px;}											
+.weui_dialog .infor{line-height: 1.5;text-align: left;padding: 20px;}						
+.weui_dialog_ft{margin-top: 5px;}
+.go-on{color: #8FD05C;}
+.header-infor{height: 40px;line-height: 40px;margin-top: 5px;border-bottom: 1px #f0f0f0 solid;padding-bottom: 5px;}
+.header-infor .l-text{float: left;margin-left: 10px;font-size: 18px;}
+.header-infor .r-img{float: right;margin-right: 10px;margin-top: 8px;}
+.header-infor .r-img img{width: 25px;}
+
+.tongji-wrap{text-align: center;padding: 0;}
+.picture-wrap .text{height:40px;line-height: 40px;border-bottom: 1px #f0f0f0 solid;}
+.tongji{padding: 10px 0;}
+.tongji li{float: left;width: 33.33%;line-height: 1.5;}
+.tongji li .correct-num{color: #8FD05C;}
+.tongji li .error-num{color: #FB9F94;}

@@ -1,0 +1,97 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>user_id</th>
+		<th>姓名</th>
+		<th>级别</th>
+		<th>金额</th>
+		<th>操作</th>
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td>{$vv.id}</td>
+				<td>{$vv.name}</td>
+	
+				<if condition="$vv.type eq 1">
+					<td>总代</td>
+					<elseif condition="$vv.type eq 2"/>
+					<td>特级</td>
+					<elseif condition="$vv.type eq 3"/>
+					<td>一级</td>
+					<elseif condition="$vv.type eq 4"/>
+					<td>初级</td>
+				</if>
+
+			
+				<td>{$vv.sy_money}</td>
+				<td>
+					<button type="button" onclick="chongzhiSy({$vv.id})" class="btn btn-warning " style = "background: #44B549">充值</button>
+				</td>
+			</tr>
+		</volist>
+</table>
+<input type="hidden" name="bili" id="bili" value="{$bili}"/>
+<div class="pagelist">{$page}</div>
+<script src="__PUBLIC__/Admin/layer/layer.js"></script>
+<script src="__PUBLIC__/Admin/js/jquery.js"></script>
+<script>
+var open = 0;
+function chongzhiSy(user_id) {
+        open = layer.open({
+            type: 1,
+            skin: '', //加上边框
+            area: ['300px', '200px'], //宽高
+            content: '<div  style="margin-left: 0px;"><div >' +
+            '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p>金额</p>' +
+            '<input style="border-radius: 4px;border: 1px solid #D9DADC;"  placeholder="" id="fee" type="text" />' +
+            '<div class="" style="margin-top: 5px;">' +
+            '<button style="background:#44B549;" type="submit"  class="btn btn-default btn-default1" onclick="daoFee(' + user_id + ')">确定</button>' +
+            '</div></div></div></div></div>'
+        });
+    }
+	function daoFee(user_id){
+		money = $("#fee").val();
+		layer.close(open);
+		$.ajax({
+            type:'post',
+            url:"{:U('syFanDianAjax')}",
+            dataType:'json',
+            data:{
+                money:money,
+				user_id:user_id
+            },
+            success:function (data) {
+               if(data == 0){
+                   layer.msg('成功');
+                   setTimeout(function () {
+                       
+					   history.go(0);
+                   },1000);
+
+			   }
+			   if(data == -1){
+                   layer.msg('失败');
+                   setTimeout(function () {
+                       
+                   },1000);
+			   }
+			   if(data == -2){
+				 layer.msg('当月已返点');
+			   }
+
+            }
+        });
+	}
+</script>

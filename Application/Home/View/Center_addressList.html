@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/order.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/common.css"/>
+</head>
+<body>
+	<div class="wrap" style="padding-bottom: 50px;">
+		<header class="header-top">
+			<div class="fixed fixed-top">
+				<div class="head">				
+					<span class="l-icon" onclick="history.go(-1)"><img src="__PUBLIC__/web/img/xiangzuo.png"/></span>
+					<span>管理收货地址</span>				
+					<div class="clear"></div>				
+				</div>
+			</div>
+		</header>
+		<volist name="data" id="v">
+		<div class="addr-list">
+			<div class="n-info">
+				<span class="f-l name">{$v.name}</span>
+				<span class="f-r mobile">{$v.tel}</span>
+				<div class="clear"></div>
+			</div>
+			<div class="addr">{$v.address}</div>
+			<div class="n-info font-size12">
+				<span class="f-l"><if condition="$v['is_true'] eq 1"><img src="__PUBLIC__/web/img/icon-img/checkbox.png"/></if><if condition="$order_id neq null"><span onclick="moren({$v.id},{$type},{$order_id});"> 默认地址</span><else/><span onclick="moren({$v.id},{$type},-1);"> 选择地址</span></if></span>
+				<span class="f-r"><img src="__PUBLIC__/web/img/del.png"/> <span class="del" onclick="setDown({$v.id});">删除</span> 
+				<!-- <img src="__PUBLIC__/web/img/icon-img/edit.png"/> <span onclick="save({$v.address_id});">编辑</span></span> -->
+			</div>
+		</div>
+		</volist>
+		<div class="fixed fixed-bottom">
+			<a class="add-btn" href="{:U('addNewAddress')}">添加新的收货地址</a>
+		</div>
+	</div>
+	<script src="__PUBLIC__/web/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+
+	<script>
+	var rnumber = Math.floor(Math.random()*1000) 
+		history.replaceState({mod: rnumber}, 'Title', '?mod='+rnumber); 
+	function moren(i,type,order_id){
+			/*$.ajax({
+			type: "post",
+			url: "{:U('add_moren')}",
+			data: {'id':i},
+			success: function(data) {
+			    if(data==1){
+				layer.msg("设置成功!",{icon: 1});
+				
+					setTimeout(function(){
+			           location.href="{:U('order')}";
+					},1000);				
+								
+				}else if(data==2){
+				  layer.msg("设置失败",{icon: 2});
+				}                 			
+			},
+			error:function(){
+			   layer.msg("未知错误",{icon: 2});
+			 }
+		});*/
+		if(type == 0){
+			location.href = "{:U('yuncangTiHuo')}?address_id=" + i;
+		}else{
+			location.href = "{:U('xiangqing')}?address_id=" + i + "&order_id=" + order_id;
+		}
+		
+	}
+	
+	function setDown(id){
+		layer.confirm('删除后无法恢复，确认删除吗', {
+            btn: ['确认','取消'] //按钮
+        }, function(){
+//            layer.msg("删除成功");
+            $.ajax({
+                url:"{:U('deleteAdd')}",
+                type:'post',
+                data:{
+					id:id
+				},
+                dataTyps:'json',
+                success:function(res){
+                    history.go(0);
+                    layer.msg("删除成功");
+                },
+            });
+
+        }, function(){
+
+        });
+	}
+	function save(i){
+		location.href="{:U('add_save')}?id="+i;
+	}
+	</script>	
+</body>
+</html>

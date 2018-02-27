@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/weui.new.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/order.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/common.css"/>
+<style>
+.add_address{padding: 12px;background: #fff;text-align: center;margin-bottom: 10px;}
+.bz_infor{background: #fff;margin-bottom: 10px;padding-bottom: 0;}
+.right_sum{text-align: right;border-top: 1px #f0f0f0 solid;height: 40px;line-height: 40px;padding-right: 10px;}
+.tip{padding: 10px;background: #fff;color: #FF0000;}
+.fee1{background: #fff;padding: 0 10px;margin-top: 10px;}
+.f_wrap{padding: 10px 0;border-bottom: 1px #f0f0f0 solid;}
+.f_left{float: left;}
+.f_right{float: right;}
+.f_wrap .total{color: red;}
+.f_wrap:last-child{border-bottom: 0;}
+.th_btn{display: block;margin: 20px 10px;text-align: center;padding: 10px;background: #6CCDFF;color: #fff;}
+</style>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" style="background:#6CCDFF">				
+				<span class="l-icon"  onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home2/images/xiangzuo1.png"/></span>
+				<span>确定提货</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<div class="add_address">添加地址</div>
+	<a href="{:U('addressList')}" class="buyer-info" style="position: relative;display: block;">
+		<p style="margin-left:15px;margin-bottom:5px;">收货人  :  {$add.name} <span class="tel" style="margin-left:30px;">{$add.tel}</span></p>
+		<p class="addr" style="margin-left:10px;">
+			<img src="__PUBLIC__/web/img/dingwei.png" style="width: 20px;vertical-align: middle;"/>
+			<span style="vertical-align: middle;">{$add.address}</span>
+		</p>
+		<div style="position: absolute;top: 5px;right:10px;"><img src="__PUBLIC__/web/img/arrow.png" style="width: 10px;"/></div>
+		<input type="hidden" id="add_id" value="{$add.id}"/>
+	</a>
+	<div class="bz_infor">
+		<div class="buyer_beizhu" style="padding: 10px;">
+			买家备注 :
+			<textarea name="" rows="" cols="" id="content" style="display: block;width: 100%;"></textarea>
+		</div>
+		<div class="right_sum">共{$number}件商品</div>
+	</div>
+	<div class="fee1">
+		<div class="f_wrap">
+			<span class="f_left">商品金额</span>
+			<span class="f_right">￥0</span>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<a  onclick="tihuo({$order_id})" class="th_btn">确定提货</a>
+</div>
+</body>
+<script src="__PUBLIC__/home2/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var rnumber = Math.floor(Math.random()*1000) 
+	history.replaceState({mod: rnumber}, 'Title', '?mod='+rnumber); 
+	var i = 0;
+	function tihuo(order_id){
+		if(i != 0){
+		layer.msg('正在处理');
+			return;
+		}
+		add_id = $("#add_id").val();
+		content = $("#content").val();
+		//alert(content);
+		if(add_id == ''){
+			layer.msg('请选择收获地址');
+			return;
+		}
+		i = i+1;
+		$.ajax({
+			type: "POST",
+			url: "{:U('shiyongzhuangTh')}",
+			dataType: "json",
+			data: {
+				order_id:order_id,
+				address_id:add_id,
+				content:content
+			},
+			success:function(data){
+				
+				if(data == -1){
+					layer.msg('提货失败');
+				}
+				if(data == 0){
+					layer.msg('提货成功');
+					setTimeout(function(){
+						//history.go(-3);
+						location.href = "{:U('index')}"
+					},1000);
+				}
+				if(data == -2){
+					layer.msg('请选择商品');
+				}
+				if(data == -3){
+					layer.msg('商品数量不足');
+				}
+				if(data == -4){
+				    layer.msg('地址格式不正确');
+				}
+			}
+		});
+		
+	}
+</script>
+</html>

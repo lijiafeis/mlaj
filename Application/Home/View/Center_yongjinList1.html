@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>佣金提成　{$money}</span>
+				<button onclick="tixian()" style="margin-left: 10px;padding:5px;border: 0px;border-radius: 4px;">立即提现</button>
+				<div class="clear"></div>
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="">
+		<tr class="bg-color">
+			<td>类型</td>
+			<td>金额</td>
+			<td>时间</td>
+			<!--<td>类型</td>-->
+		</tr>
+		<volist name="data" id="vv">
+		<tr class="bottom-line">
+			<if condition="$vv.type eq 0">
+				<td>下级充值</td>
+				<elseif condition="$vv.type eq 1"/>
+				<td>推荐奖</td>
+				<else/>
+				<td>每月返利</td>
+			</if>
+			<td>￥{$vv.money}</td>
+			<td>{$vv.time|date="Y-m-d H:i:s",###}</td>
+
+		</tr>
+		</volist>
+	</table>
+</div>
+<script>
+	function tixian() {
+		location.href = "{:U('tixian')}";
+    }
+</script>
+</body>
+</html>

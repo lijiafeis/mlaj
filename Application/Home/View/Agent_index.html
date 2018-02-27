@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<style>
+html,body{height:100%;}
+*{margin: 0;padding: 0;}
+.wrap{max-width: 640px;margin: auto;background: #F4F4F2;font-family: "微软雅黑";font-size: 14px;letter-spacing: 2px;height:100%;}
+.input_wrap{padding: 0 15px;}
+.img1{width: 100%;display: block;}
+.text{height: 40px;line-height: 40px;text-align: center;color: #51514F;}
+input{display: block;border: 0;outline: none;border: 1px #666664 solid;font-family: "微软雅黑";width: 100%;color: #777;
+padding: 12px 10px;box-sizing: border-box;font-size: 14px;letter-spacing: 2px;}
+.cx{display: block;text-align: center;color: #fff;background: #67CDFE;padding: 12px;margin-top: 15px;font-size: 16px;letter-spacing: 2px;}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<img class="img1" src="__PUBLIC__/home/images6/img1.png"/>
+		<div class="input_wrap">			
+			<div class="text">代理授权查询</div>
+			<input type="" name="" id="number" value="" placeholder="手机号码/微信号"/>
+			<a onclick="getAgentForNumber()" class="cx">查 询</a>
+		</div>
+	</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function getAgentForNumber() {
+		number = $('#number').val();
+		$.ajax({
+			type:'post',
+			url:"{:U('test')}",
+			dataType:'json',
+			data:{
+				number:number,
+			},
+			success:function (data) {
+				if(data == 0){
+					location.href = "{:U('getAgentForNumber')}?number=" + number;
+				}
+				if(data == -1){
+				   //墨绿深蓝风
+					var id = layer.alert('该代理信息不存在，谨防假冒！', {
+					  skin: 'layui-layer-molv' //样式类名
+					  ,closeBtn: 0
+					}, function(){
+						layer.close(id);
+					});
+				}
+            }
+
+		});
+		//alert(number);
+    	
+	}
+</script>
+</html>

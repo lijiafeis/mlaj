@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+</head>
+<body>
+<div class="wrap">
+	<div class="register xc-box">
+		<div class="mobile-input">
+			<input type="text" style="width: 100%" name="tel" id="tel" value="" placeholder="请输入手机号" maxlength="11"/>
+		</div>
+		<div class="yzm-input">
+			<input type="text" name="yz_number" id="yz_number" value="" placeholder="输入验证码"/>
+			<span class="get-yzm" style="background:#6CCDFF" onclick="getCode()" >获取验证码</span>
+			<div class="clear"></div>
+		</div>
+
+		<a  class="btn cx-btn" onclick="check()" style="background:#6CCDFF">获取登录密码</a>
+
+		<div class="mobile-input" style="margin-top: 20px;">
+			<input type="text" style="width: 100%" name="pass" id="pass" value="" placeholder="你的密码" />
+		</div>
+	</div>
+</div>	
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function getCode() {
+		var re = /^1\d{10}$/;
+		var tel = $('#tel').val();
+		if(tel == null){
+            layer.msg('请填写手机号');exit;}
+		if(!re.test(tel)){
+            layer.msg('请填写正确的手机号');exit;
+		}
+		$.post("{:U('getCode')}",{tel:tel},
+			function(data){
+				if(data == 1){
+					layer.msg('短信发送成功');exit;
+					//$('#androidDialog1').css("display","none");
+				}
+				if(data == 0){
+                    layer.msg('短信已发送');exit;
+				}
+				if(data == -1){
+                    layer.msg('操作太频繁');exit;
+				}
+			})
+
+    }
+
+    function check(){
+        var tel = $('#tel').val();
+        if(tel == ''){
+            layer.msg('请填写手机号');
+            return;
+        }
+        var yz_number = $('#yz_number').val();
+        $.post("{:U('wangjiPass')}",{tel:tel,yz_number:yz_number},
+            function(data){
+//            alert('a');
+                if(data == -1){
+                    layer.msg('验证码不正确');return;
+                }
+                if(data == 0){
+                    layer.msg('该手机号没有注册过');
+				}else{
+                    $('#pass').val(data);
+				}
+
+
+            })
+    }
+</script>
+</html>

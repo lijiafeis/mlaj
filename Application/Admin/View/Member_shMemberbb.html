@@ -1,0 +1,52 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>user_id</th>
+		<th>姓名</th>
+		<th>身份证号码</th>
+		<th>电话</th>
+		<th>地址</th>
+		<th>上级姓名</th>
+		<th>级别</th>
+		<th>操作</th>
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td>{$vv.id}</td>
+				<td>{$vv.name}</td>
+				<td>{$vv.card}</td>
+
+				<td>{$vv.tel}</td>
+				<td>{$vv.address}</td>
+				<td>{$vv.sj_name}</td>
+				<if condition="$vv.type eq 1">
+					<td>总代</td>
+					<elseif condition="$vv.type eq 2"/>
+					<td>特级</td>
+					<elseif condition="$vv.type eq 3"/>
+					<td>一级</td>
+					<elseif condition="$vv.type eq 4"/>
+					<td>初级</td>
+				</if>
+				<td>
+					<a href="{:U('shType')}?id={$vv.id}&type=1"><button type="button" class="btn btn-warning " style = "background: #44B549">通过</button></a>
+					<a href="{:U('shType')}?id={$vv.id}&type=2"><button type="button" class="btn btn-warning " style = "background: #D84F4B">不通过</button></a>
+				</td>
+			</tr>
+		</volist>
+</table>
+<div class="pagelist">{$page}</div>
+<script>
+</script>

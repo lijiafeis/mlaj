@@ -1,0 +1,234 @@
+.uploader-wrap .weui-uploader__input-box:before, .weui-uploader__input-box:after {
+	background: rgba(0,0,0,0);
+}
+
+.uploader-wrap .weui-uploader__input-box:before {
+	width: 0;
+	height: 0;
+}
+
+.uploader-wrap .weui-uploader__input-box:after {
+	width: 0;
+	height: 0;
+}
+
+.uploader-wrap .weui-uploader__input-box {
+	position: relative;
+	/*background: #f0f0f0;*/
+}
+
+.uploader-wrap .weui-uploader__input-box img {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 23px;
+	left: 23px;
+}
+
+.uploader-wrap .weui-cell {
+	padding: 0;
+	margin-top: 0;
+}
+
+.uploader-wrap .weui-cells:before {
+	border-top: 0;
+}
+
+.input-box {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.input-box .input-wrap {
+	border: 1px #ccc solid;
+	display: table;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+.input-box .input-wrap .input-wrap-addon {
+	border: 0;
+	outline: none;
+	background: rgba(0,0,0,0);
+	width: 1%;
+	white-space: nowrap;
+	display: table-cell;
+	padding: 12px 10px;
+	box-sizing: border-box;
+}
+
+.input-box .input-wrap input {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: "Microsoft YaHei";
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.input-box h4 {
+	margin: 10px 0;
+}
+
+.input {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: "Microsoft YaHei";
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+	border: 1px #ccc solid;
+}
+
+textarea {
+	border: 0;
+	outline: none;
+	display: block;
+	border: 1px #ccc solid;
+	border-radius: 4px;
+	width: 100%;
+	padding: 6px 12px;
+	font-family: "Microsoft YaHei";
+	box-sizing: border-box;
+	height: 50px;
+}
+
+.info {
+	background: #fff;
+	border: 1px #ccc solid;
+	padding: 12px 10px;				
+	border-radius: 4px;
+}
+
+.info input {
+	float: left;
+	border: 0;
+	outline: none;
+}
+
+.icon-angle-down ,.icon-angle-up {
+	float: right;
+	margin-top: 3px;
+	font-size: 20px;
+}
+
+.down {
+	float: right;
+				/*margin-top: 2px;*/
+	transform: rotate(0deg);
+}
+
+.up {
+	transform: rotate(180deg);
+}
+
+.info-content {
+	border: 1px #ccc solid;
+	background: #fff;
+	border-radius: 0 0 4px 4px;
+	border-top: 0;
+	padding-left: 10px;
+	display: none;
+	box-sizing: border-box;
+}
+
+.info-content li {
+	line-height: 3;
+}
+
+
+input{font-family: "Microsoft YaHei"}
+
+body{line-height: 1.6;}
+.infor_box {
+	margin-top: 10px;
+	background: #fff;
+	padding: 10px;
+	color: #000;
+	line-height: 2;
+}
+
+.info {
+	padding: 2px 10px;
+}
+
+#update_btn {
+	padding: 12px;
+	display: block;
+	margin: 20px 50px;
+	background: #ff6363;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.weui-uploader__input-box {
+	border: 1px #ff6363 solid;
+}
+
+.text_col {
+	color: #666;
+}
+
+.beizhu {
+	display: flex;
+}
+
+.bz_text {
+	flex: 3;
+	margin-left: 5px;
+}
+
+.bz_text textarea {
+	width: 100%;
+}
+
+.tips {
+	padding: 10px;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
+.date_time {
+	margin-bottom: 8px;
+}
+
+.date_time input,.zfb input {
+	width: 72%;
+}
+
+.jin_e input {
+	width: 74%;
+}
+
+.select_wrap {
+	position: relative;
+	margin-left: 5px;
+}
+
+.select_wrap ul {
+	position: absolute;
+	top: 26px;
+	left: 0;
+	width: 100%;
+}
+.weui-cells:after{border-bottom: 0;}

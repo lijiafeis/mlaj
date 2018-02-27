@@ -1,0 +1,82 @@
+body {
+	background: #fff;
+}
+
+.top_wrap .left .iconfont {
+	color: #fff;
+	font-size: 20px;
+}
+
+.tie_wrap {
+	padding-top: 30px;
+}
+
+.tie_wrap .title {
+	border-bottom: 1px #f0f0f0 solid;
+	padding-bottom: 10px;
+}
+
+.tie_wrap .title img {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin-right: 8px;
+	padding-left: 15px;
+}
+
+.tie_wrap .title input {
+	vertical-align: middle;
+	font-size: 18px;
+	color: #c4c4c4;
+	padding-top: 3px;
+}
+
+.tie_wrap input {
+	width: 80%;
+	border: 0;
+	outline: none;
+}
+
+.tie_wrap .content {
+	margin: 15px 0;
+	padding-left: 15px;
+}
+
+.tie_wrap textarea {
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	outline: none;
+	border: 0;
+	font-size: 14px;
+	color: #c4c4c4;
+}
+
+.up_wrap {
+	position: relative;
+	padding-left: 15px;
+}
+
+.up_file {
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+}
+
+.up_bg {
+	background: #f2f2f2;
+	width: 110px;
+	height: 110px;
+	z-index: 1;
+	text-align: center;
+}
+
+.up_bg img {
+	width: 50px;
+	height: 50px;
+	margin-top: 18px;
+}		

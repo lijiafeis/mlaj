@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/weui.new.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>业绩</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="" class="table">
+		<!--<tr>-->
+			<!--<td>姓名</td>-->
+			<!--<td>时间</td>-->
+			<!--<td>业绩</td>-->
+		<!--</tr>-->
+		<!--<volist name="data" id="vv">-->
+		<!--<tr>-->
+			<!--<td>{$vv.name}</td>-->
+			<!--<td>{$vv.yjtime}</td>-->
+			<!--<td>{$vv.yjnumber}</td>-->
+
+
+		<!--</tr>-->
+		<!--</volist>-->
+	</table>
+	<input type="hidden" name="userid" id="userid" value="{$user_id}"/>
+	<div class="jf-total">总业绩:{$yeji}分</div>
+</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="__PUBLIC__/js/xigua_pageload.js"></script>
+<script>
+	/*初始化相关参数，请求url地址时用的$.post()方法*/
+	var user_id = $('#userid').val();
+    var scroll_data = {
+        'url':"{:U('xiajiyejibb')}?",//如果不传token值，直接后加一个 ？，当前&后为get参数p，在后台接收处理
+        'parentId':$('.table'),//要加载的父元素DOM
+        't_data':{'user_id':user_id,'name2':'一些必要的判断条件2','name3':'一些必要的判断条件3'}//异步要传的参数，json
+    };
+</script>
+<script>
+    var page_load = '<div class="weui-loadmore load_more" data-page="1" data-state="1" style="display: block;"><i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span></div>';
+    var page_none = '<tr ><td colspan="3" style="">没有更多了</td></tr>';
+    var flag = 0;
+    $(function(){
+        if($(document).scrollTop() == 0 && $(document).height()  ==  $(window).height()){
+			/*首次打开页面加载*/
+            get_page()
+        }
+        $(window).scroll(function() {
+            //$(document).scrollTop() 获取垂直滚动的距离、$(document).scrollLeft() 这是获取水平滚动条的距离
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                //$('body').append('下滑了')
+                get_page()
+            }
+        });
+    })
+    function get_page(){
+
+        var load_more = scroll_data.parentId.find('.load_more');
+        if(load_more.length == 0){
+            scroll_data.parentId.append(page_load)
+            load_more = scroll_data.parentId.find('.load_more')
+        }
+        // 判断上一个请求是否执行完
+        var state = load_more.data('state')
+        if(state == 0){return}else{load_more.data('state',0)}
+        load_more.show()
+        var page = load_more.data('page')
+        $.post(scroll_data.url+"p="+page,scroll_data.t_data,function(data){
+            str = '';
+            if(flag == 0){
+                str = '<tr><td>姓名</td><td>时间</td><td>业绩</td></tr>';
+                flag = flag + 1;
+            }else{
+
+            }
+            for(var i = 0;i < data.length;i++){
+                str += '<tr>';
+                str += '<td>' + data[i]['name'] + '</td>'
+				str += '<td>' + data[i]['yjtime'] +'</td>';
+                str += '<td>' + data[i]['yjnumber'] + '</td>';
+
+            }
+            load_more.hide().data('page',page*1+1).before(str)
+            if(data == ''){
+                load_more.before(page_none)
+            }else{
+                load_more.data('state',1)
+            }
+        })
+    }
+</script>
+</html>

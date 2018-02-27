@@ -1,0 +1,1 @@
+a:1:{i:0;a:8:{s:6:"app_id";s:1:"1";s:6:"wxname";s:12:"西瓜科技";s:4:"wxid";s:12:"西瓜科技";s:6:"weixin";s:0:"";s:5:"appid";s:18:"wx54adb5040b8b1a24";s:9:"appsecret";s:32:"59ee8bd75c5f219f29b19e8dadc32368";s:6:"machid";s:10:"1384294402";s:4:"mkey";s:32:"qazwsxedcrfvtgbyhnujmikolpqazwsx";}}

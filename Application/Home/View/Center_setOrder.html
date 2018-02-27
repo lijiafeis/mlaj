@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" style="background:#6CCDFF">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>订单</span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="">
+		<tr>
+			<td style="width: 50px;background:#6CCDFF">商品</td>
+			<td style="width: 50px;background:#6CCDFF">规格</td>
+			<td style="width: 50px;background:#6CCDFF">尺寸</td>
+			<td style="width: 50px;background:#6CCDFF">数量</td>
+		</tr>
+		<volist name="data" id="vv">
+		<tr>
+			<td style="width: 50px">{$vv.shop_name}</td>
+			<td style="width: 50px">{$vv.danwei}</td>
+			<td style="width: 50px">{$vv.size}</td>
+			<td style="width: 50px">{$vv.number}</td>
+		</tr>
+		</volist>
+	</table>
+	<div class="jf-total">总积分:{$money}分</div>
+	<!--<table border="" style="margin-top:20px;" cellspacing="" cellpadding="">
+		<tr style="background:#fff">
+			<td colspan="4" style="color:#000">收货地址</td>
+			
+			
+		</tr>
+		<volist name="addList" id="vv">
+		<label>
+		<tr>
+			<td style="text-align:center;width:20px;"><input type="radio" value="{$vv.id}" name="address" id="address"/></td>
+			<td>{$vv.name}</td>
+			<td>{$vv.tel}</td>
+			<td class="content">{$vv.address}</td>
+			
+		</tr>
+		</label>
+		</volist>
+		<tr>
+			<td colspan="4">备注:　　<textarea name="content" id="content" rows="" cols="30"></textarea></td>
+		</tr>
+	</table>-->
+	<input type="hidden" name="order_id" id="order_id" value="{$order_id}"/>
+	<a class="fixed fixed-bottom bottom-btn" style="background:#6CCDFF" onclick="setFukuan({$money})">付款</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(function(){	
+		$('.goods-num').click(function(){
+			$(this).addClass('text-active').siblings().removeClass('text-active');			
+		});
+	})
+	
+	function setFukuan(money){
+		var order_id = $('#order_id').val();
+		var address_id = $('input:radio:checked').val();
+		var content = $('#content').val();
+		/*if(address_id == null){
+		    layer.msg('请选择收货地址');
+		    return;
+		}*/
+        var index = layer.load(0, {shade: false}); //0代表加载的风格，支持0-2
+		$.ajax({
+			type:"post",
+			url:"fukuan",
+			dataType:"json",
+			data:{
+				order_id:order_id,
+				//address_id:address_id,
+				money:money,
+				//content:content
+			},
+			success:function(data){
+				if(data == -1){
+					layer.msg('你的积分不足，请充值');
+				}
+				if(data == 0){
+					layer.msg('购买成功');
+					setTimeout(function(){
+						//location.href = "{:U('shop')}";
+						history.go(-2);
+					},1000);
+				}
+				if(data == -2){
+					layer.msg('购买失败');
+				}
+				if(data == -3){
+					layer.msg('你的上级的余额不足');
+				}
+				layer.close(index);
+			}
+		});
+	}
+	
+	
+</script>
+</html>

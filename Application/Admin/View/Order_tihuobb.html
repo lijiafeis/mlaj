@@ -1,0 +1,80 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>用户名</th>
+		<th>订单号</th>
+		<th>地址</th>
+		<th>电话</th>
+		<th>商品价格</th>
+		<th>结账</th>
+		<!--<th>状态</th>-->
+		<th>时间</th>
+		<th>备注</th>
+		<th>上级姓名</th>
+		<th>操作</th>
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td>{$vv.name}</td>
+				<td>{$vv.order_sn}</td>
+				<td class="content">{$vv.address}{$vv.address1}</td>
+				<td>{$vv.tel}</td>
+				<td>{$vv.shopmoney}</td>
+				<if condition="$vv.state eq 0">
+					<td style="color:#44B549;">未结账</td>
+					<else/>
+					<td>已结账</td>
+				</if>
+				<!--<if condition="$vv.btype eq 0">-->
+					<!--<td style="color: red">未提货</td>-->
+					<!--<elseif condition="$vv.type eq 1"/>-->
+					<!--<td>未提货</td>-->
+					<!--<elseif condition="$vv.type eq 2"/>-->
+					<!--<td>已提货</td>-->
+				<!--</if>-->
+				<td>{$vv.time|date="Y-m-d H:i:s",###}</td>
+				<td>{$vv.content}</td>
+				<td>{$vv.sj_name}</td>
+				<td>
+					<a href="{:U('tihuoxiangqing')}?id={$vv.order_id}"><button type="button" class="btn btn-warning " style = "background: #44B549">详情</button></a>
+					<!--<button type="button" class="btn btn-warning" onclick="wuliu({$vv.order_id})" style = "background: orange">物流信息</button>-->
+				</td>
+			</tr>
+		</volist>
+</table>
+<div class="pagelist">{$page}</div>
+<script>
+    function wuliu(order_id) {
+//        $.ajax({
+//            type:'post',
+//			url:"{:U('isFH')}",
+//			dataType:'json',
+//			data:{
+//                order_id:order_id,
+//			},
+//			success:function (data) {
+//				if(data == 0){
+//				    layer.msg('该订单没有发货');
+//				}else{
+//                    location.href = "{:U('showWuliu')}?order_id=" + order_id;
+//				}
+//            }
+//		});
+		location.href = "{:U('showWuliu')}?order_id=" + order_id;
+    }
+    
+
+    
+</script>

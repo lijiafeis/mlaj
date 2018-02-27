@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
+<style>
+.flex_wrap{display: flex;border-bottom: 1px #f0f0f0 solid;height: 40px;line-height: 40px;}
+.flex{flex: 1;text-align: center;}
+.text_wrap{padding: 0 10px;}
+.text_wrap .text{padding: 10px;border-bottom: 1px #f0f0f0 solid;}
+.goods{padding: 15px;display: flex;border-bottom: 1px #f0f0f0 solid;position: relative;}
+.goods .goods_img{width: 60px;height: 60px;display: block;margin-right: 10px;}
+.goods_infor{flex: 2;}
+.bottom_infor{color: #5A5A5A;font-size: 13px;margin-top: 10px;}
+.bottom_infor span{margin-right: 20px;display: block;float: left;}
+.bottom_infor .price{color: red;font-size: 16px;}
+.active{border-bottom: 1px #6CCDFF solid;color: #6CCDFF;}
+.goods input{width: 25px;height: 25px;text-align: center;border-radius: 2px;}
+.r_add{position: absolute;right: 5px;bottom: 10px;}
+.add{margin-right:5px;font-size: 16px;background: #ff6363;color: #fff;}
+.sum_num{width: 25px;height: 25px;background: #f0f0f0;text-align: center;font-size: 16px;}
+.pane{display: none;}
+.pane:first-child{display: block;}
+</style>
+</head>
+<body style="background: #fff;">
+<div class="wrap yc_wrap" style="background: #fff;">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" >				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home2/images/xiangzuo1.png"/></span>
+				<span>我的云仓</span>	
+				<a class="r_tx js"  style="display: none;">
+					<span id="tx" onclick="jiesuan()">确认</span>					
+				</a>
+				<a class="r_tx zy_btn"  style="display: none;">
+					<span id="tx" onclick="zhuanyiSp()">转移</span>					
+				</a>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<div class="flex_wrap">
+		<div class="flex tab1 jh active">进货</div>
+		<div class="flex tab1 zy">转移库存</div>
+		<div class="flex tab1 th">提货</div>
+	</div>
+
+	<div class="panes">
+		<div class="pane">
+			<div class="text_wrap">
+				<div class="text">云仓库存</div>
+			</div>
+			<volist name="data" id="vv">
+			<div class="goods">
+				<img class="goods_img" src="{$vv.img_url}"/>
+				<div class="goods_infor">
+					<p>{$vv.title}</p>
+					<div class="bottom_infor">
+						<span>可提取数量: {$vv.kucun}</span>
+						<span>规格: {$vv.guige}</span>
+						<span>尺寸: {$vv.size}</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			</volist>
+		</div>
+		 <!--  [0] => array(13) {
+    ["id"] => string(1) "1"
+    ["img_url"] => string(39) "/Uploads/shop/2017-05-22/1495432348.jpg"
+    ["title"] => string(47) "米洛爱加纸尿裤（S码）（72片*4包）"
+    ["number"] => string(4) "1000"
+    ["time"] => string(19) "2017-05-22 13:52:28"
+    ["fee1"] => string(5) "75.00"
+    ["fee2"] => string(5) "85.00"
+    ["fee3"] => string(5) "95.00"
+    ["fee4"] => string(6) "109.00"
+    ["size"] => string(1) "S"
+    ["guige"] => string(3) "箱"
+    ["type"] => string(1) "0"
+    ["kucun"] => string(1) "4" -->
+		<div class="pane">
+		<volist name="data" id="vv">
+			<div class="goods">
+				<img class="goods_img" src="{$vv.img_url}"/>
+				<div class="goods_infor">
+					<p>{$vv.title}</p>
+					<div class="bottom_infor">
+						<span>可提取数量: {$vv.kucun}</span>
+						<span>规格: {$vv.guige}</span>
+						<span>尺寸: {$vv.size}</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="r_add" style="bottom:2px;">
+					<input style="margin-right:0px;width:20px;height:20px;" class="add" type="button" name=""  onclick="zhuanyi({$vv.id},{$vv.kucun},2)" id="zhuanyi" value="－" readonly="readonly"/>
+					<input class="sum_num zhuanyi"  type="hidden" name="" id="" value="a"  readonly="readonly"/>
+					<input class="sum_num zhuanyi" type="" name="" id="zhuanyi{$vv.id}" value="0"  readonly="readonly"/>
+					<input class="sum_num zhuanyi" type="hidden" name="" id="zyId" value="{$vv.id}"  readonly="readonly"/>
+					
+					<input class="add" style="width:20px;height:20px;" type="button" name="" readonly="readonly" onclick="zhuanyi({$vv.id},{$vv.kucun},1)" id="zhuanyi" value="✚" readonly="readonly"/>
+				</div>
+			</div>
+			</volist>
+			<div style="width:100%;height:32px;"></div>
+		</div>
+		
+		<div class="pane">
+			<volist name="data" id="vv">
+			<div class="goods">
+				<img class="goods_img" src="{$vv.img_url}"/>
+				<div class="goods_infor">
+					<p>{$vv.title}</p>
+					<div class="bottom_infor">
+						<span>可提取数量: {$vv.kucun}</span>
+						<span>规格: {$vv.guige}</span>
+						<span>尺寸: {$vv.size}</span>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="r_add" style="bottom:2px;">
+					<input style="margin-right:0px;width:20px;height:20px;" class="add" type="button" name=""  onclick="tihuo({$vv.id},{$vv.kucun},2)" id="zhuanyi" value="－" readonly="readonly"/>
+					<input class="sum_num tihuo" type="hidden" name="" id="" value="a"  readonly="readonly"/>
+					<input class="sum_num tihuo" type="" name="" id="tihuo{$vv.id}" value="0"  readonly="readonly"/>
+					<input class="sum_num tihuo" type="hidden" name="" id="" value="{$vv.id}"  readonly="readonly"/>
+					
+					<input class="add" style="width:20px;height:20px;" type="button" readonly="true" name="" onclick="tihuo({$vv.id},{$vv.kucun},1)" id="tihuo" value="✚" readonly="readonly"/>
+				</div>
+			</div>
+			</volist>
+			<div style="width:100%;height:32px;"></div>
+		</div>
+		
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home2/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home1/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+		$(function(){	
+			$('.tab1').click(function(){				
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.panes>.pane:eq('+$(this).index()+')').show().siblings().hide();
+			});
+			$('.th').click(function(){				
+				$(".js").show();	
+				$(".zy_btn").hide();	
+			})
+			$('.jh').click(function(){				
+				$(".js").hide();
+				$(".zy_btn").hide();	
+			})
+			$('.zy').click(function(){				
+				$(".js").hide();
+				$(".zy_btn").show();
+			})
+		})
+		
+</script>
+
+<script>
+	var rnumber = Math.floor(Math.random()*1000) 
+		history.replaceState({mod: rnumber}, 'Title', '?mod='+rnumber); 
+	function zhuanyi(shop_id,num,type){
+		if(type == 1){
+			val = $('#zhuanyi' + shop_id).val();
+			val = parseInt(val);
+			num = parseInt(num);
+			val = val + 1;
+			if(val > num){
+				val = num;
+			}
+			$("#zhuanyi" + shop_id).val(val);
+		}else{
+			val = $('#zhuanyi' + shop_id).val();
+			val = parseInt(val);
+			val = val - 1;
+			if(val < 0){
+				val = 0;
+			}
+			$("#zhuanyi" + shop_id).val(val);
+		}
+		
+	}
+	function tihuo(shop_id,num,type){
+		if(type == 1){
+			val = $('#tihuo' + shop_id).val();
+			val = parseInt(val);
+			num = parseInt(num);
+			val = val + 1;
+			if(val > num){
+				val = num;
+			}
+			$("#tihuo" + shop_id).val(val);
+		}else{
+			val = $('#tihuo' + shop_id).val();
+			val = parseInt(val);
+			
+			val = val - 1;
+			if(val < 0){
+				val = 0;
+			}
+			$("#tihuo" + shop_id).val(val);
+		}
+		
+	}
+	
+	function zhuanyiSp(){
+		var str = '';
+        jQuery('.zhuanyi').each(function(key,value){
+            str = str + "," + $(this).val();
+        });
+		str = str + ",";
+		$.ajax({
+			type:"post",
+			url:"{:U('testXj')}",
+			dataType:"json",
+			success:function(data){
+				if(data == 0){
+					location.href = "{:U('zhuanyi')}?str=" + str;
+				}else{
+					layer.msg('你还没有下级噢');
+				}
+			}
+		});
+		//alert(str);
+		
+		
+	}
+	
+	function jiesuan(){
+		var str = '';
+        jQuery('.tihuo').each(function(key,value){
+            str = str + "," + $(this).val();
+        });
+		str = str + ",";
+		//alert(str);
+		$.ajax({
+			type:"post",
+			url:"{:U('yuncangtihuoajax')}",
+			dataType:"json",
+			data:{
+				str:str
+			},
+			success:function(data){
+				location.href = "{:U('yuncangTiHuo')}?str=" + str;
+			}
+		});
+		
+        
+	}
+
+</script>
+</html>

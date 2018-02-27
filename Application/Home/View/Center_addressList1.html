@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+	<style>
+		.content{
+			width: 100px;
+			height: 55px;
+			/*white-space: nowrap;*/
+			/*text-overflow: ellipsis;*/
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>收货地址</span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="">
+		<tr>
+			<td>选择</td>
+			<td>姓名</td>
+			<td>电话</td>
+			<td class="content">地址</td>
+			<!-- <td>操作</td> -->
+		</tr>
+		<volist name="data" id="vv">
+		<tr onclick="setDown({$vv.id})">
+			<td><input  style="width:15px;" type="radio" value="{$vv.id}" name="address" id="address"/></td>
+			<td>{$vv.name}</td>
+			<td>{$vv.tel}</td>
+			<td class="content">{$vv.address}</td>
+			<!-- <td> -->
+			<!-- <button type="button" class="btn btn-warning" onclick="del({$vv.id})" style = "background: orange">删除</button> -->
+			<!-- </td> -->
+		<!-- </tr> -->
+		</volist>
+	</table>
+	<a class="fixed fixed-bottom bottom-btn" href="{:U('addNewAddress')}">添加新地址</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    function del(id){
+        layer.confirm('删除后无法恢复，确认删除吗', {
+            btn: ['确认','取消'] //按钮
+        }, function(){
+//            layer.msg("删除成功");
+            $.ajax({
+                url:"{:U('deleteAdd')}",
+                type:'post',
+                data:'id=' + id,
+                dataTyps:'json',
+                success:function(res){
+                    history.go(0);
+                    layer.msg("删除成功");
+                },
+            });
+
+        }, function(){
+
+        });
+    }
+	
+	function setDown(id){
+		layer.confirm('删除后无法恢复，确认删除吗', {
+            btn: ['确认','取消'] //按钮
+        }, function(){
+//            layer.msg("删除成功");
+            $.ajax({
+                url:"{:U('deleteAdd')}",
+                type:'post',
+                data:{
+					id:id
+				},
+                dataTyps:'json',
+                success:function(res){
+                    history.go(0);
+                    layer.msg("删除成功");
+                },
+            });
+
+        }, function(){
+
+        });
+	}
+	
+</script>
+</html>

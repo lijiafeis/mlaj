@@ -1,0 +1,312 @@
+[ 2017-03-12T00:13:34+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=e4a57125e7eafeb464342eb24e70eed202d063b2&timestamp=1489248814&nonce=757387942&openid=oDtCdwGN0f-mazHRcTdhvwW1Fxfw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T01:50:41+08:00 ] 61.151.218.119 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T02:03:20+08:00 ] 58.247.206.141 /index.php/Wxapi?signature=6b12add4f577ba3e0cec4d95777455b5b1295dd8&timestamp=1489255400&nonce=1001098077&openid=oDtCdwGRCVcda8jhZ9LnqElYN4Zw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T02:22:06+08:00 ] 58.247.206.153 /index.php/Wxapi?signature=ad17fa822924cbc5c839a190482661354d00b6c2&timestamp=1489256526&nonce=1932526271&openid=oDtCdwDG9eK4uiQDy2jInDpsmgmc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T07:57:08+08:00 ] 58.247.206.153 /index.php/Wxapi?signature=9530080a14452678872b5abff5ff7cdaaad90886&timestamp=1489276628&nonce=198324083&openid=oDtCdwA-TPkromaoecrGGRhExFw0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T10:22:19+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=6ee49c137966ac861bafbffbc422e2f5b87b9537&timestamp=1489285339&nonce=2129249626&openid=oDtCdwEC8bxMq9239v2jX3IuIb3c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+
+[ 2017-03-12T10:22:26+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=52b1d913f571c75d32da58e5c60b17db57857394&timestamp=1489285346&nonce=1780996964&openid=oDtCdwEC8bxMq9239v2jX3IuIb3c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+ERR: 1146:Table 'daxiao.dx_news' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_news`
+
+[ 2017-03-12T10:23:26+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=4904480ef1c3a6f16ffb12d57df502631e8e057d&timestamp=1489285406&nonce=1449262133&openid=oDtCdwEC8bxMq9239v2jX3IuIb3c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T10:29:21+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=577449560269e354df69ae2352a59ad420a1ef9f&timestamp=1489285761&nonce=27374278&openid=oDtCdwBMOmi_pQ5cXVPaQf6YVpJ0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+
+[ 2017-03-12T10:55:31+08:00 ] 58.247.206.149 /index.php/Wxapi?signature=fe349159e22c8c16d72a4ee1719a9106ae6a1864&timestamp=1489287331&nonce=357693358&openid=oDtCdwEQcA8P-ceckG04Xxl61OsA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T13:15:15+08:00 ] 101.226.61.206 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/tixian.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:15:23+08:00 ] 101.226.99.195 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/yongjinjl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:15:46+08:00 ] 101.226.33.220 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/qr.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:16:14+08:00 ] 180.153.214.192 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:16:49+08:00 ] 58.247.206.153 /Wxapi?signature=a4ea3d37f040d0ab53865da77c46e88d5e7d8d7b&timestamp=1489295809&nonce=237920732&openid=oxpmdwDBkRZg29ERBnZw50ut8Ykc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+
+[ 2017-03-12T13:17:19+08:00 ] 180.153.214.192 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/youxijl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:17:35+08:00 ] 42.51.159.84 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/youxijl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T13:39:08+08:00 ] 58.247.206.144 /index.php/Wxapi?signature=b77de48c8ba62352322a0f1a9a02bc0db657fee2&timestamp=1489297147&nonce=505567983&openid=oDtCdwMn4HUw4Be7md3qpAZyEwJo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T15:09:31+08:00 ] 101.226.33.216 /wxapi/oauth/index.html?surl=http://dl.wannice.com/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T16:34:07+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=4b99f43403f3e4bb71a7dde7092e0c1ddbd3155e&timestamp=1489307647&nonce=277471218&openid=oDtCdwLNhn_wMDpWFX-crqhUgyWw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+ERR: 1146:Table 'daxiao.dx_subscribe' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_subscribe`
+
+[ 2017-03-12T19:30:15+08:00 ] 140.207.54.74 /index.php/Wxapi?signature=767f5151532b150aaedf6f278e66c196623b7063&timestamp=1489318215&nonce=613239684&openid=oDtCdwJ3B9G13IufFBwYOB0Zeous
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T21:17:33+08:00 ] 180.153.206.17 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:17:35+08:00 ] 101.226.65.108 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2017-03-12T21:18:14+08:00 ] 61.151.226.189 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/tuiguangjl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:19:47+08:00 ] 101.226.66.181 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/yongjinjl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2017-03-12T21:20:00+08:00 ] 101.226.51.230 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/tixian.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:20:00+08:00 ] 180.153.214.188 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/tixian.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:20:00+08:00 ] 180.163.2.88 /wxapi/oauth/index.html?surl=http://dl.wannice.com/Home/Index/tixian.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-12T21:25:58+08:00 ] 140.207.54.73 /index.php/Wxapi?signature=9cc406d1f63948c64e29a5237bbc915f98355c86&timestamp=1489325157&nonce=505883259&openid=oDtCdwMqmgjUERNMTJ998fPU2y8s
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T22:22:39+08:00 ] 58.247.206.156 /index.php/Wxapi?signature=2d26d9346d7af7f28b8f12df5720866422972024&timestamp=1489328558&nonce=2025147589&openid=oDtCdwGc_5IV1o5U-mSYAmt3-NWw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-12T22:47:33+08:00 ] 58.247.206.143 /index.php/Wxapi?signature=131d4e14853b05b2aca2472a3a03463c81d070b7&timestamp=1489330053&nonce=906925832&openid=oDtCdwBYATantkyijfIm7wtYIO8E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+

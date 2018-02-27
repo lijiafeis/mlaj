@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
+<style>
+.yeji_box .yeji_infor{margin-bottom:0;}
+</style>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon"  onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home1/images/xiangzuo1.png"/></span>
+				<span>我的团队</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>		
+	<div class="yeji_box table">
+		
+	</div>
+</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	/*初始化相关参数，请求url地址时用的$.post()方法*/
+    var scroll_data = {
+        'url':"{:U('xiajibb')}?",//如果不传token值，直接后加一个 ？，当前&后为get参数p，在后台接收处理
+        'parentId':$('.table'),//要加载的父元素DOM
+        't_data':{'name1':'一些必要的判断条件1','name2':'一些必要的判断条件2','name3':'一些必要的判断条件3'}//异步要传的参数，json
+    };
+</script>
+<script>
+    var page_load = '<div class="weui-loadmore load_more" data-page="1" data-state="1" style="display: block;"><i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span></div>';
+    var page_none = '<tr ><td colspan="3" style="">没有更多了</td></tr>';
+    var flag = 0;
+    $(function(){
+        if($(document).scrollTop() == 0 && $(document).height()  ==  $(window).height()){
+			/*首次打开页面加载*/
+            get_page()
+        }
+        $(window).scroll(function() {
+            //$(document).scrollTop() 获取垂直滚动的距离、$(document).scrollLeft() 这是获取水平滚动条的距离
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                //$('body').append('下滑了')
+                get_page()
+            }
+        });
+    })
+    function get_page(){
+
+        var load_more = scroll_data.parentId.find('.load_more');
+        if(load_more.length == 0){
+            scroll_data.parentId.append(page_load)
+            load_more = scroll_data.parentId.find('.load_more')
+        }
+        // 判断上一个请求是否执行完
+        var state = load_more.data('state')
+        if(state == 0){return}else{load_more.data('state',0)}
+        load_more.show()
+        var page = load_more.data('page')
+        $.post(scroll_data.url+"p="+page,scroll_data.t_data,function(data){
+			
+            str = '';
+            for(var i = 0;i < data.length;i++){
+                str += '<div class="yeji_infor">';
+                str += '<img class="tx" src="'+data[i]['headimgurl']+'"/>';
+                str += '<div class="r_infor">';
+                str += '<div class="name">'+data[i]['name']+'</div>';
+                str += '<div class="yeji">业绩: '+data[i]['dy_yeji']+'</div>';
+                str += '</div><div><img class="r_img" src="__PUBLIC__/home1/images/'+data[i]['type']+'"/></div></div>';
+            }
+            load_more.hide().data('page',page*1+1).before(str)
+            if(data == ''){
+                load_more.before(page_none)
+            }else{
+                load_more.data('state',1)
+            }
+        })
+    }
+</script>
+</html>

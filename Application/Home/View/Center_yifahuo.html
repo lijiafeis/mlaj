@@ -1,0 +1,87 @@
+
+<volist name="data" id="vv">
+	<div class="order-list">
+		<div class="name">{$vv.time|date="Y-m-d H:i:s",###}</div>
+		<div class="info-box">
+			<div class="info">
+				<div class="goods-image">
+					<img src="__PUBLIC__/home/images5/banner3.png"/>
+				</div>
+				<div class="r-info">
+					<div><span><span class="ft-12">价格</span>:{$vv.shopmoney}积分</span><span> <span class="ft-12"></span></span><span> <span class="ft-12">商品数量</span>:{$vv.count}</span></div>
+					
+				</div>
+			</div>
+			<div class="order-btn">
+				<a class="ft-12" style="background:#6CCDFF" href="{:U('xiangqing')}?order_id={$vv.id}">查看详情</a>
+			</div>
+		</div>
+	</div>
+</volist>
+
+<!--
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>提货记录</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	
+	<div class="order-box panes">
+		<div class="pane">
+			<volist name="data" id="vv">
+	<div class="order-list">
+		<div class="name">{$vv.time|date="Y-m-d H:i:s",###}</div>
+		<div class="info-box">
+			<div class="info">
+				<div class="goods-image">
+					<img src="__PUBLIC__/home/images5/banner3.png"/>
+				</div>
+				<div class="r-info">
+					<div><span><span class="ft-12">价格</span>:{$vv.shopmoney}积分</span><span> <span class="ft-12"></span></span><span> <span class="ft-12">商品数量</span>:{$vv.count}</span></div>
+					
+				</div>
+			</div>
+			<div class="order-btn">
+				<a class="ft-12" href="{:U('xiangqing')}?order_id={$vv.id}">查看详情</a>
+			</div>
+		</div>
+	</div>
+</volist>
+		</div>
+		<div class="pane" id="list2">
+
+		</div>
+		<div class="pane" id="list3">
+
+		</div>
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function(){	
+		$('.tab').click(function(){
+			$(this).addClass('active-color').siblings().removeClass('active-color');
+			$('.panes>.pane:eq('+$(this).index()+')').show().siblings().hide();
+		})
+	})
+
+</script>
+</html>-->
+
+

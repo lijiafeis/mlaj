@@ -1,0 +1,65 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>user_id</th>
+		<th>姓名</th>
+		<th>商品名字</th>
+		<th>库存</th>
+		<th>类别</th>
+		
+		<!--<th>操作</th>-->
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td>{$vv.user_id}</td>
+				<td>{$vv.name}</td>
+				<td>{$vv.title}</td>
+				<td>{$vv.kucun}</td>
+				<if condition="$vv.type eq 0">
+				<td>纸尿裤</td>
+				<elseif condition="$vv.type eq 1"/>
+				<td>拉拉裤</td>
+				<elseif condition="$vv.type eq 2"/>
+				<td>试用装</td>
+				<elseif condition="$vv.type eq 3"/>
+				<td>运费链接</td>
+				</if>
+			</tr>
+		</volist>
+</table>
+<div class="pagelist">{$page}</div>
+<script>
+    function wuliu(order_id) {
+//        $.ajax({
+//            type:'post',
+//			url:"{:U('isFH')}",
+//			dataType:'json',
+//			data:{
+//                order_id:order_id,
+//			},
+//			success:function (data) {
+//				if(data == 0){
+//				    layer.msg('该订单没有发货');
+//				}else{
+//                    location.href = "{:U('showWuliu')}?order_id=" + order_id;
+//				}
+//            }
+//		});
+		location.href = "{:U('showWuliu')}?order_id=" + order_id;
+    }
+    
+
+    
+</script>

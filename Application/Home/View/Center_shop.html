@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css6/reset.css"/>
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" style="background:#6CCDFF">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images6/xiangzuo.png"/></span>
+				<span>商品列表</span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	<volist name="data" id="vv">
+	<div class="goods_list">
+		<div class="img"><img src="{$vv.img_url}"/></div>
+		<div class="goods_info">
+			<span class="text-active"  style="display: none">{$vv.id}</span>
+			<p class="title">{$vv.title}</p>
+			<p class="">规格 : <span class="text-active">{$vv.guige}</span> <span class="size">尺寸 : <span class="text-active">{$vv.size}</span></span></p>
+			<if condition="$type eq 1">
+				<p class="ft_12">积分 : <span class="goods_price">{$vv.fee1}</span> <span class="kucun ">库存 : <span class="">{$vv.kucun|default=0}</span></span></p>
+			<elseif condition="$type eq 2" />
+			<p class="ft_12">积分 : <span class="goods_price">{$vv.fee2}</span> <span class="kucun ">库存 : <span class="">{$vv.kucun|default=0}</span></span></p>
+			<elseif condition="$type eq 3"/>
+				<p class="ft_12">积分 : <span class="goods_price">{$vv.fee3}</span> <span class="kucun ">库存 : <span class="">{$vv.kucun|default=0}</span></span></p>
+			<elseif condition="$type eq 4"/>
+				<p class="ft_12">积分 : <span class="goods_price">{$vv.fee4}</span> <span class="kucun ">库存 : <span class="">{$vv.kucun|default=0}</span></span></p>
+			</if>
+		</div>
+		<div class="add_min">				
+			<input type="button" onclick="abc1({$vv.id})" name="" id="" value="▬" />
+			<!--<input class="text_input" type="" name="" id="" value="" readonly="readonly"/>-->
+			<span class="text_input text-active" id="abc{$vv.id}">0</span>
+			<input type="button" onclick="abc2({$vv.id})" name="" id="" value="✚" />
+		</div>			
+	</div>
+	</volist>
+	<div style="width:100%;height:32px;"></div>
+	<a class="fixed fixed-bottom bottom-btn" style="background:#6CCDFF;"  onclick="setOrder({$isLogin})">立即进货</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var rnumber = Math.floor(Math.random()*1000) 
+	history.replaceState({mod: rnumber}, 'Title', '?mod='+rnumber); 
+    function abc1(shop_id) {
+        number = $("#abc" + shop_id).html();
+        number = parseInt(number)
+        if(isNaN(number)){
+            number = 0;
+        }
+        number = number -1;
+        if(number < 0){
+            number = 0;
+        }
+        $("#abc" + shop_id).html(number);
+    }
+    function abc2(shop_id) {
+        number = $("#abc" + shop_id).html();
+
+        number = parseInt(number)
+        if(isNaN(number)){
+            number = 0;
+        }
+        number = number + 1;
+        $("#abc" + shop_id).html(number);
+    }
+
+    function setOrder(){
+        var data = [];
+        var str = '';
+        jQuery('.text-active').each(function(key,value){
+//            data = data + ',' + $(this).text();
+//            data[key] =  $(this).text();
+            //或者也可以这么写：
+            str = str + "," + $(this).text();
+            // btns[key] = $(value).val();
+        });
+        str = str + ",";
+        //判断当前用户是否有收获地址
+        $.ajax({
+            type:'post',
+            url:"{:U('isAddress')}",
+            dataType:"json",
+            success:function (data) {
+                if(data == 0){
+                    location.href = "{:U('setOrder')}?data=" + str;
+                }else{
+                    layer.msg('你还没有收货地址，请填写收货地址');
+                    setTimeout(function () {
+                        location.href = "{:U('setOneAddress')}?data=" + str;
+                    },1000);
+                }
+            }
+        });
+
+    }
+
+</script>
+</html>

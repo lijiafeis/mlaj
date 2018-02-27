@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home1/css/style06.09.css"/>
+<style>
+.active_col{color: #6CCDFF;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon"  onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home1/images/xiangzuo1.png"/></span>
+				<span>我的钱包</span>
+				<a class="r_tx" href="{:U('tixian')}">
+					<span id="tx" style="border:1px solid #fff;">提现</span>					
+				</a>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	<div class="tabs_2">
+		<div class="tab tab1 active_col">余额</div>
+		<div class="tab tab1">积分</div>
+		<div class="clear"></div>
+	</div>
+	<div class="panes">
+		<div class="pane">
+			<if condition="$type eq 1">
+			<div class="jin_e_color1">￥{$money}<span style="margin-left:70px;font-size:16px;color:#000">保证金:￥1000</span></div>	
+			<else/>
+			<div class="jin_e_color1">￥{$money}</div>	
+			</if>
+			<div class="jl_list_wrap">
+				<div class="title">收支记录</div>
+				<volist name="data" id="vv">
+				<div class="jl_list"> 
+					<div class="top">
+						<if condition="$vv.type eq 0">
+						<div style="float: left;">奖金(类型:下级充值积分返现)</div>
+						<elseif condition="$vv.type eq 1"/>
+						<div style="float: left;">奖金(类型:下级代理订单推荐奖)</div>
+						<elseif condition="$vv.type eq 2"/>
+						<div style="float: left;">奖金(类型:每月总业绩返还佣金)</div>
+						<elseif condition="$vv.type eq 3"/>
+						<div style="float: left;">奖金(类型:下级进货扣除推荐奖)</div>
+						<elseif condition="$vv.type eq 4"/>
+						<div style="float: left;">奖金(类型:下级升级返现)</div>
+						</if>
+						<div class="date">{$vv.time|date="Y-m-d H:i:s",###}</div>
+						<div class="clear"></div>
+					</div>
+					<div class="order_infor">
+						<if condition="$vv.type eq 3">
+						<div class="sum">金额: <span class="color1" style="color:red">-{$vv.money}</span></div>
+						<else/>
+						<div class="sum">金额: <span class="color1">+{$vv.money}</span></div>
+						</if>
+						
+						<div class="order_num">订单号: {$vv.time}</div>
+					</div>
+				</div>	
+				</volist>
+			</div>
+		</div>
+		<div class="pane" style="display: none;">
+			<div class="jin_e_color1">￥{$yeji|default=0}</div>	
+			<div class="btns_2">
+				<div class="btn hit" style="float: left;" onclick="chongzhiJf()">积分充值</div>
+				<div class="btn" style="float: right;" onclick="moneytoJifen({$money})">余额转入</div>
+				<div class="clear"></div>
+			</div>
+			<div class="jl_list_wrap">
+				<div class="title">收支记录</div>
+				<volist name="da" id="vv">
+				<div class="jl_list"> 
+					<div class="top">
+						<if condition="$vv.type eq 0">
+						<div style="float: left;">类型:购买商品</div>
+						<elseif condition="$vv.type eq 1"/>
+						<div style="float: left;">类型:后台充值</div>
+						<elseif condition="$vv.type eq 2"/>
+						<div style="float: left;">类型:余额转换</div>
+						<elseif condition="$vv.type eq 3"/>
+						<div style="float: left;">类型:下级进货扣除推荐奖</div>
+						</if>
+						<div class="date">{$vv.time|date="Y-m-d H:i:s",###}</div>
+						<div class="clear"></div>
+					</div>
+					<div class="order_infor">
+					<if condition="$vv.type eq 0">
+						<div class="sum">积分: <span class="color1">-{$vv.number}</span></div>
+					<elseif condition="$vv.type eq 3"/>
+						<div class="sum">积分: <span class="color1">-{$vv.number}</span></div>
+					<else/>
+						<div class="sum">积分: <span class="color1">+{$vv.number}</span></div>
+					</if>
+						
+						<div class="order_num">订单号: {$vv.time}</div>
+					</div>
+				</div>	
+				</volist>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home1/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+		var rnumber = Math.floor(Math.random()*1000) 
+		history.replaceState({mod: rnumber}, 'Title', '?mod='+rnumber); 
+		//location.reload();
+		$(function(){	
+			$('.btn').click(function(){				
+				$(this).addClass('hit').siblings().removeClass('hit');				
+			})
+		});
+		$(function(){	
+			$('.tab1').click(function(){				
+				$(this).addClass('active_col').siblings().removeClass('active_col');	
+				$('.panes>.pane:eq('+$(this).index()+')').show().siblings().hide();
+				val = $(this).text();
+				if(val == '积分'){
+					$('.r_tx').css('display','none');
+				}else{
+					$('.r_tx').css('display','block');
+				}
+			})
+		})
+		function moneytoJifen(money){
+			openid = layer.open({
+				 type: 1,
+				 skin: '', //加上边框
+				 area: ['300px', '200px'], //宽高
+				 content: '<div  style="margin-left: 0px;"><div >' +
+				 '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p style="font-size:24px;">金额</p>' +
+				 '<input style="border-radius: 6px;border: 1px solid black;height: 30px;"  id="fee" type="text" value=""/>' +
+				 '<div class="" style="margin-top: 5px;">' +
+				 '<button style="margin-top:12px;background:#44B549;font-size:21px;border: 0px;border-radius: 4px; width: 100px;height: 30px; background:#6CCDFF" type="submit" onclick="setJifen('+money+')"  class="btn btn-default btn-default1" >确定</button>' +
+				 '</div></div></div></div></div>'
+			 });
+		 }
+ 
+		 function setJifen(money){
+			fee = $("#fee").val();
+			if(isNaN(fee) || fee <=0){
+				layer.msg('请输入正确的数字');
+				return;
+			}
+			if(money - fee <0){
+				layer.msg('你的余额不足，无法转换');
+				layer.close(openid);
+				return;
+			}
+			layer.close(openid);
+			//请求后台修改余额和积分
+			$.ajax({
+					type: "POST",
+					url: "{:U('moneyToJifen')}",
+					dataType: "json",
+					data: {"money":fee},
+					success: function(json){
+						if(json == -1){
+							layer.msg('转换失败');
+						}
+						if(json == 0){
+							layer.msg('转换成功');
+							setTimeout(function () {
+								history.go(0);
+							},1000);
+						}
+					},
+					error:function(){
+					}
+				});
+			
+		 }
+		 function chongzhiJf(){
+			location.href="{:U('chongzhiJf')}";
+		 }
+</script>
+</html>

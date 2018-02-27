@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
+<style>
+.hy-info img{
+	width: 15px;
+	height: 15px;
+}
+.hy-info .mobile,.hy-info .dizhi{
+	margin-left: 10px;
+}
+.hy-info .wxh{
+	width:100px;
+}
+</style>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>代理查证</span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<div class="yeji_box">
+		<volist name="data" id="vv">
+		<div class="yeji_infor">
+			<img class="tx" src="{$vv.headimgurl}"/>
+			<div class="r_infor">
+				<div class="name">{$vv.name}</div>
+				<div class="yeji">电话:　{$vv.tel}</div>
+			</div>
+			<if condition="$vv.type eq 1">
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic1.png"/></div>
+				<elseif condition="$vv.type eq 2"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic2.png"/></div>
+				<elseif condition="$vv.type eq 3"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic3.png"/></div>
+				<elseif condition="$vv.type eq 4"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic4.png"/></div>
+				</if>
+		</div>
+		</volist>
+	</div>
+	
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function getOrder(user_id) {
+		location.href = "{:U('orderList')}?user_id=" + user_id;
+    }
+</script>
+</html>

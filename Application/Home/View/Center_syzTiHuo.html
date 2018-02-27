@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/order.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/common.css"/>
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/weui.new.css"/>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>订单</span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	
+	<table border="" cellspacing="" cellpadding="">
+		<tr>
+			<td style="width: 50px">商品</td>
+			<td style="width: 50px">规格</td>
+			<td style="width: 50px">尺寸</td>
+			<td style="width: 50px">数量</td>
+		</tr>
+		<volist name="data" id="vv">
+		<tr>
+			<td style="width: 50px">{$vv.shop_name}</td>
+			<td style="width: 50px">{$vv.danwei}</td>
+			<td style="width: 50px">{$vv.size}</td>
+			<td style="width: 50px">{$vv.number}</td>
+		</tr>
+		</volist>
+	</table>
+	<div class="jf-total">总积分:{$money}分</div>
+	<table border="" style="margin-top:20px;" cellspacing="" cellpadding="">
+		<tr style="background:#fff">
+			<td colspan="4" style="color:#000">收货地址(点击选择收货地址)</td>
+			
+		</tr>
+		
+		<label>
+		<tr onclick="setAddress()">
+			<!-- <td style="text-align:center;width:20px;"><input type="radio" value="{$vv.id}" name="address" id="address"/></td> -->
+			<td>{$addList.name}</td>
+			<td>{$addList.tel}</td>
+			<td class="content">{$addList.address}</td>
+		</tr>
+		</label>
+		<input type="hidden" id="address_id1" value="{$addList.id}">
+		
+		<tr>
+			<td colspan="4">备注:　　<textarea name="content" id="content" rows="" cols="30"></textarea></td>
+		</tr>
+	</table>
+	<input type="hidden" name="order_id" id="order_id" value="{$order_id}"/>
+	<a class="fixed fixed-bottom bottom-btn" onclick="setFukuan({$money})">提货</a>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(function(){	
+		$('.goods-num').click(function(){
+			$(this).addClass('text-active').siblings().removeClass('text-active');			
+		});
+	})
+	function setAddress(){
+		location.href = "{:U('addressList')}"
+	}
+	function setFukuan(money){
+		var order_id = $('#order_id').val();
+		var address_id = $('#address_id1').val();
+		var content = $('#content').val();
+		//alert(order_id);
+		//alert(address_id);
+		//alert(content);
+		//exit;
+        var index = layer.load(0, {shade: false}); //0代表加载的风格，支持0-2
+		$.ajax({
+			type:"post",
+			url:"shiyongzhuangTh",
+			dataType:"json",
+			data:{
+				order_id:order_id,
+				address_id:address_id,
+				money:money,
+				content:content
+			},
+			success:function(data){
+				if(data == -1){
+					layer.msg('提货失败，请稍后再试');
+				}
+				if(data == 0){
+					layer.msg('提货成功');
+					setTimeout(function(){
+						//location.href = "{:U('shopKuCun')}";
+						history.go(-1);
+					},1000);
+				}
+				layer.close(index);
+			}
+		});
+	}
+	
+	
+</script>
+</html>

@@ -1,0 +1,106 @@
+[ 2017-05-13T09:26:58+08:00 ] 127.0.0.1 /saveinfo.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 28  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-13T09:27:28+08:00 ] 127.0.0.1 /saveinfo.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 28  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-05-13T09:28:06+08:00 ] 127.0.0.1 /saveinfo.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0010s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 28  [ RunTime:0.0010s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-13T09:30:57+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD D:\util\WWW\mlaj\Xigua\Library\Think\App.class.php 第 31 行.
+NOTIC: [8] Undefined index: REQUEST_URI D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 137 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' D:\util\WWW\mlaj\Xigua\Library\Think\Dispatcher.class.php 第 186 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 28  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0.17 WHERE `id` = 28 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `zongjifen`='0' WHERE `id` = 28 [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+100.05 WHERE `id` = 29 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `zongjifen`='0' WHERE `id` = 29 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-13T09:49:37+08:00 ] 127.0.0.1 /saveinfo.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `wx_user` WHERE `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 28  [ RunTime:0.0010s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0010s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 28 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `zongjifen`='0' WHERE `id` = 28 [ RunTime:0.0000s ]
+SQL: SELECT SUM(zongjifen) AS tp_sum FROM `wx_user` WHERE `sj_userid` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wx_user` WHERE `sj_userid` = 29  [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `money`=money+0 WHERE `id` = 29 [ RunTime:0.0000s ]
+SQL: UPDATE `wx_user` SET `zongjifen`='0' WHERE `id` = 29 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

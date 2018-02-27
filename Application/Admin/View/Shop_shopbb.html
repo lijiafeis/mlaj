@@ -1,0 +1,126 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>标题</th>
+		<th>数量</th>
+		<th>时间</th>
+		<th>总代价格</th>
+		<th>特级价格</th>
+		<th>一级价格</th>
+		<th>初级价格</th>
+		<th>图片</th>
+		<th>尺寸</th>
+		<th>规格</th>
+		<th>类型</th>
+		<th style="text-align: center;">操作</th>
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td class="content">{$vv.title}</td>
+				<td>{$vv.number}</td>
+				<td>{$vv.time}</td>
+				<td>{$vv.fee1}</td>
+				<td>{$vv.fee2}</td>
+				<td>{$vv.fee3}</td>
+				<td>{$vv.fee4}</td>
+				<td><img width="90px" height="100px" src="{$vv.img_url}"/></td>
+				<td>{$vv.size}</td>
+				<td>{$vv.guige}</td>
+				<if condition="$vv.type eq 0"> 
+				<td>纸尿裤</td>
+				<elseif condition="$vv.type eq 1"/>
+				<td>拉拉裤</td>
+				<elseif condition="$vv.type eq 2"/>
+				<td>试用装</td>
+				<elseif condition="$vv.type eq 3"/>
+				<td>运费链接</td>
+				<elseif condition="$vv.type eq 4"/>
+				<td>总代商品</td>
+				</if>
+				<td style="text-align: center;">
+					<a href="{:U('update')}?id={$vv.id}"><button type="button" class="btn btn-warning " style = "background: #44B549">修改</button></a>
+					<button type="button" class="btn btn-warning" onclick="del({$vv.id})" style = "background: #D84F4B">删除</button>
+				</td>
+			</tr>
+		</volist>
+</table>
+<div class="pagelist">{$page}</div>
+<script>
+    function del(id){
+        layer.confirm('删除后无法恢复，确认删除吗', {
+            btn: ['确认','取消'] //按钮
+        }, function(){
+			$.ajax({
+			    type:'post',
+				url:"{:U(delete)}",
+				dataType:"json",
+				data:{
+			        id:id
+				},
+				success:function (data) {
+					if(data == 0){
+					    layer.msg('删除成功');
+					    history.go(0);
+					}else{
+					    layer.msg('删除失败');
+					}
+                }
+			});
+        }, function(){
+
+        });
+    }
+    
+    function setURL(type) {
+		layer.confirm('确定生成链接吗？', {
+			btn: ['确认','取消'] //按钮
+		}, function(){
+			var idlist = '';
+			$('body .one_check').each(function(){
+				if($(this).is(':checked')){
+                    idlist = idlist+$(this).val()+','
+				}
+			})
+			if(idlist == ''){layer.closeAll();layer.msg('未选中任何试题');exit;}
+//			$.post("{:U('delhy')}",{del_id,del_id},function(){
+//
+//				layer.msg("删除成功");
+//				$('body .one_check').each(function(){
+//					if($(this).is(':checked')){
+//						$(this).parent().parent().css("display","none");
+//					}
+//				})
+//				// var td = $(obj).parent();//alert(a);
+//				// td.parent().css("display","none");
+//			});
+			location.href="{:U('setURLForTest')}?type=" + type + "&idlist=" + idlist;
+//			$.ajax({
+//				type:'post',
+//				url:"{:U('setURLForTest')}",
+//				dataType:'json',
+//				data:{
+//				    idlist:idlist,
+//				},
+//				success:function (data) {
+//					console.log(data);
+//                }
+//			});
+		}, function(){
+
+		});
+
+    }
+    
+</script>

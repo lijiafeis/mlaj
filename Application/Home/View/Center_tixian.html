@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<meta content="telephone=no" name="format-detection">
+    <title>我的钱包</title>
+   <!--  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="__PUBLIC__/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/weui.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css"/>
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/base.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/slide.css">
+	<script src="__PUBLIC__/layer-mobile/layer.js"></script>
+	<style>
+	.group-header{background:#6CCDFF;width:100%;padding-bottom:20px;padding-top:10px;text-align:center;
+				background:-webkit-gradient(linear, 0% 0%, 100% 100%, from({:C('WAP_COLOR')}), to({:C('WAP_JIANBIAN_COLOR')}));}
+	.group-header .group{width:33.3%;color:#fff;text-align:center;padding:20px 0 0 0;font-size:14px;}
+	.group-header .weui_cell_bd span{font-size:14px;color:#fff}
+	.weui_cell{font-size:14px;}
+	.weui_cell:focus{background:#efedf1}
+	body .weui_cell_hd{width:20%;}
+	body .weui_cell_hd .weui_label{width:100%;}
+	</style>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body  style="background: #efedf1;margin-bottom:70px;">
+	<div class="group-header" style="background:#6CCDFF">
+		<div class="person-pic">
+				<img src="{$head_img}" width="40px" style="border:1px solid #e8e8e8">
+		</div>
+		<div class="weui_cell_bd weui_cell_primary" style="margin-left:4%;padding-top:10px;font-size:16px;color:yellow;text-align:center;">
+			<!--<p style="white-space: nowrap;text-overflow:ellipsis;overflow:hidden;font-size:18px;"><span>{$info.name}</span></p>-->
+			<p style="white-space: nowrap;text-overflow:ellipsis;overflow:hidden;"><span>姓名:{$info.name}</span></p>
+			<p style="margin-left: -4px; white-space: nowrap;text-overflow:ellipsis;overflow:hidden;"><span>余额：{$info.money}元</span></p>
+			<button onclick="tixianShow()" style="background:#6CCDFF;border: 1px solid #fff; border-radius: 4px;padding: 5px;margin: 5px;">提现记录</button>
+		</div>
+		<div style="width:40%;margin:10px auto;text-align:center;float:left;margin-left:5%;">
+		</div>
+		<div style="width:40%;margin:10px auto;text-align:center;float:right;margin-right:5%;">
+		</div>
+		<div style="clear:both"></div>
+	</div>
+		
+	</div>
+	<div class="weui_cells abc" id="group4" style="">
+		<div class="weui_panel weui_panel_access">
+			<div class="weui_cells_title">输入提现金额</div>
+			<div class="weui_cells weui_cells_form">
+		            <div class="weui_cell " id="input1">
+		                <div class="weui_cell_hd"><label for="" class="weui_label">金额</label></div>
+		                <div class="weui_cell_bd weui_cell_primary">
+		                    <input class="weui_input" id="tixian_money" type="number"  value="weui input error" placeholder="请输入金额">
+		                </div>
+		                <div class="weui_cell_ft">
+		                    <i class="weui_icon_warn"></i>
+		                </div>
+		            </div>
+        			</div>
+			<div class="weui_cells_title">选择提现方式</div>
+			<div class="weui_cell weui_cell_select weui_select_after">
+				<div class="weui_cell_hd">
+					<label for="" class="weui_label">方式</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<select class="weui_select" name="type" id="tixian_type">
+						<option value="1" >银行卡转账</option>
+						<option value="2" selected>支付宝</option>
+					</select>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">收款人</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" name="user_name" id="user_name" value="{$bank_info.user_name}"  placeholder="银行卡或支付宝的拥有者姓名" >
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" name="tel" id="tel" value="{$bank_info.tel}"  placeholder="常用手机号码" >
+				</div>
+			</div>
+			<div id="tixian_type1" style="display:none;">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">开户行</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" name="bank_name" id="bank_name" value="{$bank_info.bank_name}"  placeholder="例：中国银行黄河路支行" >
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">银行卡号</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="number" name="bank_number" id="bank_number" pattern="[0-9]*" value="{$bank_info.bank_number}"  placeholder="您的银行卡号" >
+				</div>
+			</div>
+			</div>
+			<div id="tixian_type2" style="display: block;">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">支付宝账号</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" name="alipay_number" id="alipay_number" value="{$bank_info.alipay_number}"  placeholder="应为邮箱号或手机号" >
+				</div>
+			</div>
+			</div>
+			<input type="hidden" name="id" id="old_bank_id" value="{$bank_info.bank_id}" />
+
+		<div class="weui_cells_tips">余额申请转出，申请成功后<a style="text-decoration:underline;color:blue;">管理员审核打款</a></div>
+		<div style="width:80%;margin:0 auto;padding:20px;"><a href="javascript:tixian_out();" class="weui_btn weui_btn_plain_primary" style="color:#555;border:1px solid #ccc;line-height:40px;background:#fff;font-size: 14px;">立即转出</a></div>
+		</div>
+		
+	</div>
+	
+</body>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+ $("#tixian_type").change(function () {
+	 if($('#tixian_type').val() == 1){
+	     $('#tixian_type1').css('display','block');
+	     $('#tixian_type2').css('display','none');
+	 }else{
+         $('#tixian_type1').css('display','none');
+         $('#tixian_type2').css('display','block');
+	 }
+ });
+ var openid = 0;
+ function moneytoJifen(money){
+	openid = layer.open({
+         type: 1,
+         skin: '', //加上边框
+         area: ['300px', '200px'], //宽高
+         content: '<div  style="margin-left: 0px;"><div >' +
+         '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p>金额</p>' +
+         '<input style="border-radius: 4px;border: 1px solid black;height: 25px;"  id="fee" type="text" value=""/>' +
+         '<div class="" style="margin-top: 5px;">' +
+         '<button style="background:#44B549;border: 0px;border-radius: 4px; width: 70px;height: 20px;" type="submit" onclick="setJifen('+money+')" class="btn btn-default btn-default1" >确定</button>' +
+         '</div></div></div></div></div>'
+     });
+ }
+ 
+ function setJifen(money){
+	fee = $("#fee").val();
+	if(isNaN(fee) || fee <=0){
+		layer.msg('请输入正确的数字');
+		return;
+	}
+	if(money - fee <0){
+		layer.msg('你的余额不足，无法转换');
+		layer.close(openid);
+		return;
+	}
+	
+	//请求后台修改余额和积分
+	$.ajax({
+			type: "POST",
+			url: "{:U('moneyToJifen')}",
+			dataType: "json",
+			data: {"money":fee},
+			success: function(json){
+				if(json == -1){
+				    layer.msg('转换失败');
+				}
+				if(json == 0){
+                    layer.msg('转换成功');
+                    setTimeout(function () {
+                        history.go(0);
+                    },1000);
+                }
+			},
+			error:function(){
+			}
+		});
+	
+ }
+ var abc = 0;
+function tixian_out(){
+	if(abc != 0){
+		dialog2("后台审核中");return;
+	}
+	var money = $('#tixian_money').val();if(money == ''){dialog2("请输入取款金额");exit;}
+	var user_name = $('#user_name').val();if(user_name == ''){dialog2("请输入收款人真实姓名");exit;}
+	var tel = $('#tel').val();if(tel == ''){dialog2("请输入手机号码");exit;}
+	var pay_type = $('#tixian_type').val();
+	if(pay_type == 1){
+		var bank_name = $('#bank_name').val();if(bank_name == ''){dialog2("请输入开户行信息");exit;}
+		var bank_number = $('#bank_number').val();if(bank_number == ''){dialog2("请输入银行卡卡号");exit;}
+	}else{
+	 	var alipay_number = $('#alipay_number').val();if(alipay_number == ''){dialog2("请输入支付宝账号信息");exit;}
+	}
+	var old_bank_id = $('#old_bank_id').val();
+	abc = abc + 1;
+		$.ajax({
+			type: "POST",
+			url: "{:U('user_tixian')}",
+			dataType: "json",
+			data: {"money":money,'pay_type':pay_type,'old_bank_id':old_bank_id,'user_name':user_name,'tel':tel,'bank_name':bank_name,'bank_number':bank_number,'alipay_number':alipay_number},
+			success: function(json){
+				if(json == -1){
+				    layer.msg('账户余额不足');
+				}
+				if(json == 0){
+                    layer.msg('后台审核打款中');
+                    setTimeout(function () {
+                       //location.href = "{:U('wodeqianbao')}";
+					  window.history.go(-1);
+						
+                    },1000);
+                }
+                if(json == -2){
+                    layer.msg('未知错误，请稍后再试');
+                }
+				if(json == -4){
+					layer.msg('你有未提现操作,请稍候再试');
+				}
+			},
+			error:function(){
+			}
+		});
+	
+	//location.href="{:U('broke_tixian')}?money="+money;
+}
+function tixianShow() {
+	location.href = "{:U('tixianShow')}"
+}
+</script>
+</html>

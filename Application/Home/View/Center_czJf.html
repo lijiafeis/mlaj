@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/default.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/qianbao.css"/>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/weui.new.css"/>
+		<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css">
+
+	</head>
+	<body>
+	<include file="./Application/Web/view/wxjs.html"/>
+		<div class="wrap">
+			<div class="top_bar top_bar3" style="background: #FF6766">
+				<a onclick="history.go(-1)"><span class="left"><i class="icon-angle-left"></i></span></a>
+				<div class="tit" style="font-size: 16px;">充值</div>				
+			</div>
+			<!--<div class="tixian_bg bg">-->
+				<!--<div>可充值金额</div>				-->
+				<!--<span style="font-size: 25px;">¥</span>-->
+				<!--<span style="font-size: 40px;font-weight: bold;">{$money}</span>-->
+			<!--</div>-->
+			<div class="tx">充值方式</div>
+			<div class="tx_weixin">				
+				<img class="weixin_logo" src="__PUBLIC__/img/weixinlogo.png"/>
+				<span>微信支付</span>
+				<img class="money_img" src="__PUBLIC__/img/money.png"/>										
+			</div>
+			<div class="tx_jine">				
+				<span style="font-size: 16px;">充值金额</span>
+				<span class="input_wrap">
+					<input type="" name="" style="width: 250px;" id="money" value="" placeholder=""/>
+				</span>				
+				<span class="yuan">元</span>
+			</div>
+			<div style="width: 100%;text-align: center;line-height: 40px;margin-top:40px;">
+				<button onclick="tixian()" style="text-align: center;font-size: 16px; background: #FF6766;width: 200px;height: 40px;border: 1px solid #FF6766;color:#fff;border-radius:4px;">充值</button>
+			</div>
+		</div>
+	</body>
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="__PUBLIC__/admin/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/layer/layer.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+
+	function tixian() {
+		var money = $('#money').val();
+        pass(money);
+	}
+
+    function pass(money){
+//        var shade = layer.open({type:2,content:'正在提交申请',shadeClose:false});
+        $.ajax({
+            type: "POST",
+            url: "{:U('chongzhijifen')}",
+            dataType: "json",
+            data: {"money":money},
+            success: function(json){
+                if(json.success==1){
+//                    layer.close(shade);
+                    console.log(json);
+                    onBridgeReady(json);
+//
+                }else if(json.success==0){
+                    layer.close(shade);
+                    layer.open({content:'您已经充值成功',skin:'msg',shadeClose:false,time:3});
+                }
+                else{
+//                    dialog2(json.info); //onBridgeReady();
+                }
+            },
+            error : function() {
+//                dialog2("暂时无法充值噢");layer.close(shade);
+            }
+        });
+    }
+    function onBridgeReady(json){
+//        console.log(json);
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',{"appId" : json.appid,
+                "timeStamp":json.timeStamp,
+                "nonceStr" : json.nonceStr,
+                "package" : 'prepay_id='+json.prepay_id,
+                "signType" :"MD5",
+                "paySign" : json.paySign, //微信签名
+            },
+            function(res){
+                $.ajax({
+                    type: "POST",
+                    url: "{:U('abc')}",
+                    dataType: "json",
+                    data: {"res":res},
+                    success: function(json) {
+                    }
+                });
+                if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+                    loading("支付成功…");
+                }else{
+
+                }
+            }
+        );
+    }
+
+
+
+
+</script>
+</html>

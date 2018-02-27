@@ -1,0 +1,276 @@
+[ 2017-03-02T17:27:24+08:00 ] 101.226.103.63 /Wxapi?signature=573cd5101de1ad6386581152803660d00cd43d1e&echostr=3616147651981993983&timestamp=1488446844&nonce=1150659773
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T17:27:34+08:00 ] 101.226.33.223 /Wxapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA E:\WWW\cdaxiao\Application\Wxapi\Controller\IndexController.class.php 第 33 行.
+
+[ 2017-03-02T17:53:27+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T17:53:28+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=0111KMjd2uW8EA0UO7nd2NJTjd21KMjc&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 54 行.
+NOTIC: D方法实例化没找到模型类Xigua\Model\UsersModel
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-02T17:53:37+08:00 ] 101.226.33.203 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-02T17:53:37+08:00 ] 117.185.27.113 /wxapi/oauth/index.html?surl=http://gy.wannice.com
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T17:57:30+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=0111KMjd2uW8EA0UO7nd2NJTjd21KMjc&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: access_token E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+NOTIC: D方法实例化没找到模型类Xigua\Model\UserModel
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 19 行.
+
+[ 2017-03-02T17:57:30+08:00 ] 223.104.105.123 /Wxapi/Oauth/index.html?userinfo=snsapi_base&surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T17:57:31+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=041h8i2E0Vb0Kg2hHH4E0HVi2E0h8i2g&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 54 行.
+NOTIC: D方法实例化没找到模型类Xigua\Model\UserModel
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+ERR: Think\Model:get_user_by_openid方法不存在！
+
+[ 2017-03-02T17:57:40+08:00 ] 101.226.33.219 /Wxapi/Oauth/index.html?userinfo=snsapi_base&surl=http://gy.wannice.com
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:00:36+08:00 ] 119.147.146.60 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-02T18:04:15+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=041h8i2E0Vb0Kg2hHH4E0HVi2E0h8i2g&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: access_token E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 19 行.
+
+[ 2017-03-02T18:04:15+08:00 ] 223.104.105.123 /Wxapi/Oauth/index.html?userinfo=snsapi_base&surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:04:18+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=031f2J0I182fI60f3WWH1RBR0I1f2J0U&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE ( openid = 'oxpmdwHOD_VRZELZWvw1Zuiit6fE' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `dx_user` (`openid`,`nickname`,`sex`,`city`,`province`,`country`,`headimgurl`) VALUES ('oxpmdwHOD_VRZELZWvw1Zuiit6fE','What？Why？Where？','1','郑州','河南','中国','http://wx.qlogo.cn/mmopen/e2e1qOqZ60sLqnOicnqia4XSGicpKibGl7hOzXHc5HQ7Jkvn79OibWTE3fuicuvICfTehw2RLKGrWjcIHj1QdByRpIWm6esvh5sNQI/0') [ RunTime:0.0000s ]
+
+[ 2017-03-02T18:04:25+08:00 ] 180.153.201.79 /wxapi/oauth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: surl E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 8 行.
+
+[ 2017-03-02T18:07:49+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=041h8i2E0Vb0Kg2hHH4E0HVi2E0h8i2g&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: access_token E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 51 行.
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 19 行.
+
+[ 2017-03-02T18:07:49+08:00 ] 223.104.105.123 /Wxapi/Oauth/index.html?userinfo=snsapi_base&surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:07:50+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=051BgUT41bOXFN1zP5U412z0U41BgUTg&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dx_user` WHERE ( openid = 'oxpmdwHOD_VRZELZWvw1Zuiit6fE' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `dx_user` (`openid`,`nickname`,`sex`,`city`,`province`,`country`,`headimgurl`) VALUES ('oxpmdwHOD_VRZELZWvw1Zuiit6fE','What？Why？Where？','1','郑州','河南','中国','http://wx.qlogo.cn/mmopen/e2e1qOqZ60sLqnOicnqia4XSGicpKibGl7hOzXHc5HQ7Jkvn79OibWTE3fuicuvICfTehw2RLKGrWjcIHj1QdByRpIWm6esvh5sNQI/0') [ RunTime:0.0000s ]
+
+[ 2017-03-02T18:23:57+08:00 ] 58.247.206.141 /Wxapi?signature=93705420bcf607a2550a3a515287735bfd1559a5&timestamp=1488450236&nonce=119105860&openid=oxpmdwHOD_VRZELZWvw1Zuiit6fE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+ERR: 1146:Table 'daxiao.dx_users' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `dx_users`
+
+[ 2017-03-02T18:30:38+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:31:54+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:33:16+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:33:17+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=041ORkon1Yur9m002fqn1w44on1ORkoX&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Array to string conversion E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 55 行.
+
+[ 2017-03-02T18:40:10+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=041ORkon1Yur9m002fqn1w44on1ORkoX&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: access_token E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 55 行.
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 55 行.
+NOTIC: [8] Undefined index: openid E:\WWW\cdaxiao\Application\Wxapi\Controller\OauthController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+ERR: 1048:Column 'openid' cannot be null
+ [ SQL语句 ] : INSERT INTO `dx_user` (`openid`) VALUES (NULL)
+ERR: 1048:Column 'openid' cannot be null
+ [ SQL语句 ] : INSERT INTO `dx_user` (`openid`) VALUES (NULL)
+
+[ 2017-03-02T18:40:33+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:40:34+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=031pyXcV08uxiX1Ow0fV0ODUcV0pyXct&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: INSERT INTO `dx_user` (`openid`) VALUES ('oxpmdwHOD_VRZELZWvw1Zuiit6fE') [ RunTime:0.0000s ]
+
+[ 2017-03-02T18:40:37+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?surl=http://gy.wannice.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-02T18:40:38+08:00 ] 223.104.105.123 /wxapi/oauth/index.html?code=031ptIw018lxL22496z01qPRw01ptIwO&state=http%3A%2F%2Fgy.wannice.com%2F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dx_user` [ RunTime:0.0000s ]
+SQL: INSERT INTO `dx_user` (`openid`) VALUES ('oxpmdwHOD_VRZELZWvw1Zuiit6fE') [ RunTime:0.0000s ]
+

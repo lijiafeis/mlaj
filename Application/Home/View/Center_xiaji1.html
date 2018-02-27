@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/style.css"/>
+<style>
+.hy-info img{
+	width: 15px;
+	height: 15px;
+}
+.hy-info .mobile,.hy-info .dizhi{
+	margin-left: 10px;
+}
+.hy-info .wxh{
+	width:100px;
+}
+</style>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head" style="background:#6CCDFF">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+
+				<span>团队会员</span>
+				<span style="margin-left: 24px;border: 0px;border-radius: 4px;padding: 7px;"></span>
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<div class="hy-box table">
+		
+	</div>
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script>
+	function getOrder(user_id) {
+		location.href = "{:U('orderList')}?user_id=" + user_id;
+    }
+
+    function xiajiyeji(user_id) {
+        location.href = "{:U('xiajiyeji')}?user_id=" + user_id;
+    }
+	var openid= '';
+    function chongzhijf(user_id) {
+        openid = layer.open({
+            type: 1,
+            skin: '', //加上边框
+            area: ['300px', '200px'], //宽高
+            content: '<div  style="margin-left: 0px;"><div >' +
+            '<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p style="font-size:22px;">请填写充值积分</p>' +
+            '<input   style="font-size:20px;border-radius: 4px;border: 1px solid black;height: 30px;"  id="jifen" type="text" value=""/>' +
+            '<div class="" style="margin-top: 5px;">' +
+            '<button onclick="chongzhijifen('+user_id+')" style="width:70px;height:30px;border-radius:4px;border:0px;background:;">充值</button>' +
+            '</div></div></div></div></div>'
+        });
+    }
+
+    function chongzhijifen(user_id) {
+	    var jifen = $('#jifen').val();
+		$.ajax({
+			type:'post',
+			url:"{:U('chongzhijifen')}",
+			dataType:"json",
+			data:{
+			    user_id:user_id,
+				jifen:jifen
+			},
+			success:function (data) {
+				if(data == 0){
+				    layer.msg('充值成功');
+				}else{
+				    layer.msg('充值失败');
+				}
+				layer.close(openid);
+            }
+			
+		});
+    }
+
+    function czjfList() {
+        location.href = "{:U('czjfList')}";
+    }
+
+</script>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	/*初始化相关参数，请求url地址时用的$.post()方法*/
+    var scroll_data = {
+        'url':"{:U('xiajibb')}?",//如果不传token值，直接后加一个 ？，当前&后为get参数p，在后台接收处理
+        'parentId':$('.table'),//要加载的父元素DOM
+        't_data':{'name1':'一些必要的判断条件1','name2':'一些必要的判断条件2','name3':'一些必要的判断条件3'}//异步要传的参数，json
+    };
+</script>
+<script>
+    var page_load = '<div class="weui-loadmore load_more" data-page="1" data-state="1" style="display: block;"><i class="weui-loading"></i><span class="weui-loadmore__tips">正在加载</span></div>';
+    var page_none = '<tr ><td colspan="3" style="">没有更多了</td></tr>';
+    var flag = 0;
+    $(function(){
+        if($(document).scrollTop() == 0 && $(document).height()  ==  $(window).height()){
+			/*首次打开页面加载*/
+            get_page()
+        }
+        $(window).scroll(function() {
+            //$(document).scrollTop() 获取垂直滚动的距离、$(document).scrollLeft() 这是获取水平滚动条的距离
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                //$('body').append('下滑了')
+                get_page()
+            }
+        });
+    })
+    function get_page(){
+
+        var load_more = scroll_data.parentId.find('.load_more');
+        if(load_more.length == 0){
+            scroll_data.parentId.append(page_load)
+            load_more = scroll_data.parentId.find('.load_more')
+        }
+        // 判断上一个请求是否执行完
+        var state = load_more.data('state')
+        if(state == 0){return}else{load_more.data('state',0)}
+        load_more.show()
+        var page = load_more.data('page')
+        $.post(scroll_data.url+"p="+page,scroll_data.t_data,function(data){
+			console.log(data);
+			/*<volist name="data" id="vv">
+			<div class="hy-info">
+				<div class="name"><span>{$vv.name}</span></div>
+				<div class="wxh"><img src="__PUBLIC__/home/images5/icon/weixin.png"/> <span>{$vv.wxname}</span></div>
+				<div class="mobile"><img src="__PUBLIC__/home/images5/icon/tel.png"/> <span>{$vv.tel}</span></div>
+				<button onclick="getOrder({$vv.id})" style="margin-left: 30px;border: 0px;border-radius: 4px; width: 70px;height: 24px;background: #44B549">订单查看</button>
+				<div class="clear"></div>
+				<img  class="dizhi" src="__PUBLIC__/home/images5/icon/shouye.png"/> <span>{$vv.address}</span>
+				<img  class="dizhi" src="__PUBLIC__/home/images5/icon/shouye.png"/> <span>上月消费额度:{$vv.address}</span>
+			</div>
+		</volist>*/
+            str = '';
+            for(var i = 0;i < data.length;i++){
+                str += '<div class="hy-info">';
+                str += '<div class="name"><span>' + data[i]['name'] + '</span></div>'
+				str += '<div class="wxh"><img src="__PUBLIC__/home/images5/icon/weixin.png"/> <span>' + data[i]['wxname'] +'</span></div>';
+                str += '<div class="mobile"><img src="__PUBLIC__/home/images5/icon/tel.png"/> <span>' + data[i]['tel'] + '</span></div>';
+                str += '<button onclick="getOrder(' + data[i]['id'] + ')" style="margin-left: 30px;border: 0px;border-radius: 4px;width: 70px;height: 24px;background: #44B549">订单查看</button>';
+                str += '<div class="clear"></div>';
+                str += '<img  class="dizhi" src="__PUBLIC__/home/images5/icon/shouye.png"/> <span>' + data[i]['address'] + '</span>';
+				 str += '<img  class="dizhi" src="__PUBLIC__/home/images5/icon/shouye.png"/> <span>上月总业绩:' + data[i]['zongjifen'] + '</span></div>';
+
+            }
+            load_more.hide().data('page',page*1+1).before(str)
+            if(data == ''){
+                load_more.before(page_none)
+            }else{
+                load_more.data('state',1)
+            }
+        })
+    }
+</script>
+
+</html>

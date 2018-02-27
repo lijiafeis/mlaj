@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/commom.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css5/user.css"/>
+	<style>
+		.wid{
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home/images5/xiangzuo.png"/></span>
+				<span>审核</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>	
+	<table border="" cellspacing="" cellpadding="">
+		<tr>
+			<td class="wid">姓名</td>
+			<td class="wid">电话</td>
+			<td class="wid">身份证号</td>
+			<td class="wid">级别</td>
+			<!--<td class="wid">操作</td>-->
+		</tr>
+		<volist name="arr" id="vv">
+		<tr onclick="setState({$vv.id})">
+			<td class="wid">{$vv.name}</td>
+			<td class="wid">{$vv.tel}</td>
+			<td class="wid">{$vv.card}</td>
+			<if condition="$vv.type eq 1">
+				<td class="wid">总代</td>
+				<elseif condition="$vv.type eq 2"/>
+				<td class="wid">特级</td>
+				<elseif condition="$vv.type eq 3">
+				<td class="wid">一级</td>
+			</if>
+			<!--<td>通过</td>-->
+			<!--<td>不通过</td>-->
+		</tr>
+		</volist>
+	</table>
+	<!--<a class="fixed fixed-bottom bottom-btn" href="{:U('czJf')}">立即审核</a>-->
+</div>
+</body>
+<script src="__PUBLIC__/home/js5/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/home/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	function setState(user_id) {
+        layer.confirm('请审核会员', {
+            btn: ['通过','不通过'] //按钮
+        }, function(){
+//            layer.msg("删除成功");
+            $.ajax({
+                url:"{:U('tongguo')}",
+                type:'post',
+                data:'user_id=' + user_id,
+                dataTyps:'json',
+                success:function(res){
+                    if(res == 0){
+                        layer.msg("审核通过");
+                        setTimeout(function () {
+							location.href = "{:U('shenhe')}"
+                        },1000);
+					}
+
+                },
+            });
+
+        }, function(){
+            $.ajax({
+                url:"{:U('butongguo')}",
+                type:'post',
+                data:'user_id=' + user_id,
+                dataTyps:'json',
+                success:function(res){
+                    if(res == 0){
+                        layer.msg("审核不通过");
+                        setTimeout(function () {
+                            location.href = "{:U('shenhe')}"
+                        },1000);
+                    }
+
+                },
+            });
+        });
+    }
+</script>
+</html>

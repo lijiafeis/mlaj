@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home1/css/style06.09.css"/>
+</head>
+<body style="background: #F7F4F5;">
+<div class="wrap">
+	<header class="header-top">
+		<div class="fixed fixed-top">
+			<div class="head">				
+				<span class="l-icon" onclick="javascript:history.go(-1)"><img src="__PUBLIC__/home1/images/xiangzuo1.png"/></span>
+				<span>我的奖励</span>				
+				<div class="clear"></div>				
+			</div>
+		</div>		
+	</header>
+	<div class="my_bonuse_box">
+		<div class="jin_e_l">￥{$money|default=0}</div>
+		<div>
+			<div class="l_bonuse">推荐奖  <span class="color1">{$sy_tuijian|default=0}</span></div>
+			<div class="r_bonuse">月度返点 <span class="color1">{$sy_money|default=0}</span></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="total_team">团队总业绩 ￥{$zongyeji}</div>
+	<div class="yeji_box">
+		<volist name="data" id="vv">
+		<if condition="$vv.type eq 1">
+			<div class="yeji_infor">
+				<img class="tx" src="{$vv.headimgurl}"/>
+				<div class="r_infor">
+					<div class="name">{$vv.name}</div>
+					<div class="yeji">业绩: {$vv.sy_yeji}</div>
+				</div>
+				<if condition="$vv.type eq 1">
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic1.png"/></div>
+				<elseif condition="$vv.type eq 2"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic2.png"/></div>
+				<elseif condition="$vv.type eq 3"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic3.png"/></div>
+				<elseif condition="$vv.type eq 4"/>
+				<div><img class="r_img" src="__PUBLIC__/home1/images/pic4.png"/></div>
+				</if>
+			</div>
+			</if>
+		</volist>
+	</div>
+</div>
+</body>
+</html>

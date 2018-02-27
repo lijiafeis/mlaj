@@ -1,0 +1,127 @@
+<style>.layui-layer{top:50px!important;}
+.content{
+	/*width: 500px;*/
+	/*color: red;*/
+	/*word-break:keep-all;!* 不换行 *!*/
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+}
+</style>
+<table class="table table-striped"  style="font-size:14px;margin-top: 20px;">
+	<th style="width: 5px;">
+	<input type="checkbox" class="all_check">
+	</th>
+		<th>user_id</th>
+		<th>姓名</th>
+		<th>级别</th>
+		<th>支付宝账号</th>
+		<th>银行卡号</th>
+		<th>金额</th>
+		<th>上级姓名</th>
+		<th>时间</th>
+		<th>备注</th>
+		<th>状态</th>
+		<th>凭证</th>
+		<th>操作</th>
+		<volist name="arr" id="vv" key="kk" empty="$empty">
+			<tr id="{$kk}" style="font-size:13px;">
+				<td><input type="checkbox" class="one_check" value="{$vv.id}"></td>
+				<td>{$vv.user_id}</td>
+				<td>{$vv.name}</td>
+				<if condition="$vv.type eq 1">
+					<td>总代</td>
+					<elseif condition="$vv.type eq 2"/>
+					<td>特级</td>
+					<elseif condition="$vv.type eq 3"/>
+					<td>一级</td>
+					<elseif condition="$vv.type eq 4"/>
+					<td>初级</td>
+				</if>
+				<td>{$vv.alipay}</td>
+				<td>{$vv.bank}</td>
+				<td>{$vv.money}</td>
+				<td>{$vv.sj_name}</td>
+				<td>{$vv.time}</td>
+				<td>{$vv.content}</td>
+				<if condition="$vv.state eq 0">
+					<td>未充值</td>
+					<elseif condition="$vv.state eq 1"/>
+					<td>已充值</td>
+				</if>
+				<td><a onclick="lookPic('{$vv.pic_url}')">查看凭证</a></td>
+				<if condition="$vv.state eq 0">
+					<td>
+					<button type="button" onclick="chongzhijifen({$vv.id})" class="btn btn-warning " style = "background: #44B549">充值积分</button>
+					<!--<button type="button" class="btn btn-warning" onclick="del({$vv.id})" style = "background: #D84F4B">删除</button>-->
+				</td>
+					<elseif condition="$vv.state eq 1"/>
+					<td></td>
+				</if>
+				
+			</tr>
+		</volist>
+</table>
+<input type="hidden" name="bili" id="bili" value="{$bili}"/>
+<div class="pagelist">{$page}</div>
+<script src="__PUBLIC__/Admin/layer/layer.js"></script>
+<script src="__PUBLIC__/Admin/js/jquery.js"></script>
+<script>
+	var openid = '';
+	
+	function lookPic(pic_url){
+		openid = layer.open({
+            type: 1,
+            skin: '', //加上边框
+            area: ['750px', '700px'], //宽高
+            content: '<img src="'+pic_url+'"/>'
+        });
+	}
+    function chongzhijifen(user_id) {
+        bili = $("#bili").val();
+        openid = layer.open({
+            type: 1,
+            skin: '', //加上边框
+            area: ['300px', '200px'], //宽高
+            content: '<div  style="margin-left: 0px;"><div >' +
+			'<div style="text-align: center;margin-top: 5px;font-size: 15px;"><div><p></p>' +
+			'<p>输入充值的积分</p>' +
+			'<input style="border-radius: 4px;border: 1px solid black;" onclick="setDate()" id="jifen" type="text" value=""/>' +
+			'<div class="" style="margin-top: 5px;">' +
+			'<button style="background:#44B549;" type="submit" onclick="chongzhi('+user_id+')" class="btn btn-default btn-default1" >充值</button>' +
+			'</div></div></div></div></div>'
+        });
+    }
+
+    //异步请求充值积分
+    function chongzhi(user_id) {
+	
+        jifen = $("#jifen").val();
+		layer.close(openid);
+		$.ajax({
+			type:'post',
+			url:"{:U('chongzhi')}",
+			dataType:'json',
+			data:{
+				jifen:jifen,
+				user_id:user_id,
+			},
+			success:function (data) {
+				if(data == 0){
+					
+
+					layer.msg('充值成功');
+					setTimeout(function () {
+                        history.go(0);
+                    },1000);
+				}else{
+				    
+				    layer.msg('充值失败');
+				}
+            }
+
+		});
+    }
+    
+</script>

@@ -1,0 +1,281 @@
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="__PUBLIC__/admin/css/base.css">
+<link href="__PUBLIC__/admin/css/jquery.minicolors.css" rel="stylesheet" type="text/css" />
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="__PUBLIC__/admin/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/admin/layer/layer.js"></script>
+<script src="__PUBLIC__/admin/js/jquery.minicolors.min.js" type="text/javascript"></script>
+<div class="container-fluid main">
+	<div class="main-top"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>系统参数</div>
+	<div class="main-content">
+<style>
+.table tr td{font-size:12px;vertical-align:middle;}
+.form-control{font-size:14px;}
+</style>
+		<div>
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">参数信息</a></li><li role="presentation"><a href="#pay" aria-controls="pay" role="tab" data-toggle="tab">支付参数</a></li>
+		    <li role="presentation"><a href="#game" aria-controls="game" role="tab" data-toggle="tab">游戏参数</a></li> 
+		  </ul>
+		  
+		  <!-- Tab panes -->
+		  <!-- 模板编号	模板名	回复内容	头部颜色	文字颜色	状态	模板ID -->
+		  <include file="./Application/Admin/View/Public_switch.html" />
+	  <!-- Tab panes -->
+	  <div class="tab-content well" style="margin-top:30px">
+		    <div role="tabpanel" class="tab-pane active" id="home">		
+			<div class="alert alert-success" style="padding:5px 10px;margin:15px 0;line-height:30px;">
+				系统内重要的参数信息
+			</div>
+			<div class="well">
+			<p><span class="caret"></span> 微信开发接口api</p>
+			<p></p>
+			<p style="padding-left:20px;">url：http://your域名/wxapi/index/index</p>
+			<p style="padding-left:20px;">token：weixin</p>
+			<p></p>
+			<p><span class="caret"></span> 微信支付授权目录</p>
+			<p></p>
+			<p style="padding-left:20px;">http://your域名/pay/pay/</p>
+			<!-- <p style="padding-left:20px;">http://your域名/Shop/Index/</p> -->
+			<p></p>
+			<p><span class="caret"></span> 微信商城地址</p>
+			<p></p>
+			<p style="padding-left:20px;">url：http://your域名/shop/wap/index</p>
+			<p></p>
+			<p><span class="caret"></span> 商品详情页地址</p>
+			<p></p>
+			<p style="padding-left:20px;">url：http://your域名/Shop/wap/good?good_id=商品ID号</p>
+			<p></p>
+			<p><span class="caret"></span> 个人中心地址</p>
+			<p></p>
+			<p style="padding-left:20px;">url：http://your域名/User/center/user</p>
+			<p></p>
+			</div>	
+		    </div>
+		    <div role="tabpanel" class="tab-pane " id="pay">
+		    	<div class="alert alert-success" style="padding:5px 10px;margin:15px 0;line-height:30px;">
+						到支付宝商户平台注册申请wap版支付权限，<a href="https://b.alipay.com/signing/productSet.htm?navKey=all" target="_blank">点击这里申请</a>
+					</div>
+		  	<form class="form-horizontal" action="__SELF__" method="post">
+		  		<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">支付宝支付状态</label>
+					<div class="switch has-switch col-sm-6 col-lg-4"  style="height:30px">
+						<input name="ali_switch" value="1" type="checkbox" <if condition="$pay_info['ali_switch'] eq 1">checked</if> data-on-color="warning"  data-on-text="开启"  data-off-text="关闭" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">合作者身份(PID)
+</label>
+					<div class="col-sm-4 col-lg-3" style="margin-bottom:10px;">
+					
+					  <input type="text" class="form-control" id="" name="pid" value="{$pay_info['pid']}" placeholder="">
+					
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">安全校验码(Key)
+</label>
+					<div class="col-sm-4 col-lg-3" style="margin-bottom:10px;">
+					
+					  <input type="text" class="form-control" id="" name="key" value="{$pay_info['key']}" placeholder="">
+					
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">微信支付状态</label>
+					<div class="switch has-switch col-sm-6 col-lg-4"  style="height:30px">
+						<input name="weixin_switch" value="1" type="checkbox" <if condition="$pay_info['weixin_switch'] eq 1">checked</if> data-on-color="warning"  data-on-text="开启"  data-off-text="关闭" />
+					</div>
+				</div>
+				<input type="hidden" name="state" value="pay">
+				<button type="submit" class="btn btn-success">保存支付参数</button>
+			</form>
+		    </div>
+		    <div role="tabpanel" class="tab-pane " id="game">
+		    	<div class="alert alert-success" style="padding:5px 10px;margin:15px 0;line-height:30px;">
+						游戏相关参数设置
+					</div>
+		  	<form class="form-horizontal" action="__SELF__" method="post">
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">胸口碎大石</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="dashi_price" value="{$game_info['dashi_price']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">上限</span>
+					  <input type="text" class="form-control" id="" name="dashi_num" value="{$game_info['dashi_num']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">次</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1"></label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">累计</span>
+					  <input type="text" class="form-control" id="" name="dashi_time" value="{$game_info['dashi_time']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">天</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">水果达人</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="shuiguo_price" value="{$game_info['shuiguo_price']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">上限</span>
+					  <input type="text" class="form-control" id="" name="shuiguo_num" value="{$game_info['shuiguo_num']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">次</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1"></label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					<input type="text" class="form-control" id="" name="shuiguo_min" value="{$game_info['shuiguo_min']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">至</span>
+					  <input type="text" class="form-control" id="" name="shuiguo_max" value="{$game_info['shuiguo_max']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">累计</span>
+					  <input type="text" class="form-control" id="" name="shuiguo_time" value="{$game_info['shuiguo_time']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">天</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">切果冻</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">爆率</span>
+					  <input type="text" class="form-control" id="" name="guodong_bao" value="{$game_info['guodong_bao']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">%</span>
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">上限</span>
+					  <input type="text" class="form-control" id="" name="guodong_max" value="{$game_info['guodong_max']}" placeholder="0">
+
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">熊二酷跑</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">爆率</span>
+					  <input type="text" class="form-control" id="" name="xiong_bao" value="{$game_info['xiong_bao']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">%</span>
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">上限</span>
+					  <input type="text" class="form-control" id="" name="xiong_max" value="{$game_info['xiong_max']}" placeholder="0">
+
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">懒人区</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="lanren_price" value="{$game_info['lanren_price']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">每日</span>
+					  <input type="text" class="form-control" id="" name="lanren_day" value="{$game_info['lanren_day']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  
+					  <input type="text" class="form-control" id="" name="lanren_time" value="{$game_info['lanren_time']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">天</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1">达人区</label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">一代</span>
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="daren_first" value="{$game_info['daren_first']}" placeholder="0">
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1"></label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">二代</span>
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="daren_second" value="{$game_info['daren_second']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">直推</span>
+					  <input type="text" class="form-control" id="" name="daren_second_num" value="{$game_info['daren_second_num']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">人</span>
+					</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2   col-lg-2 control-label" for="exampleInputEmail1"></label>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">三代</span>
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">￥</span>
+					  <input type="text" class="form-control" id="" name="daren_third" value="{$game_info['daren_third']}" placeholder="0">
+					</div>
+					</div>
+					<div class="col-sm-3 col-lg-2" >
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">直推</span>
+					  <input type="text" class="form-control" id="" name="daren_third_num" value="{$game_info['daren_third_num']}" placeholder="0">
+					  <span class="input-group-addon" id="basic-addon1">人</span>
+					</div>
+					</div>
+				</div>
+				<input type="hidden" name="id" value="{$game_info['id']}">
+				<input type="hidden" name="state" value="game">
+				<button type="submit" class="btn btn-success">保存游戏配置信息</button>
+			</form>
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+</div>
+

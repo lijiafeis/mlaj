@@ -1,0 +1,71 @@
+[ 2017-08-22T14:20:08+08:00 ] 127.0.0.1 /mlaj/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-22T14:20:11+08:00 ] 127.0.0.1 /mlaj/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2017-08-22T14:20:25+08:00 ] 127.0.0.1 /mlaj/Admin/User/check.html?time=Tue%20Aug%2022%202017%2014:20:25%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_admin` [ RunTime:0.0160s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\util\WWW\mlaj\Application\Admin\Controller\UserController.class.php on line 13 and defined D:\util\WWW\mlaj\Xigua\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 339 行.
+SQL: SELECT * FROM `wx_admin` WHERE ( username='admin'  ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-08-22T14:20:30+08:00 ] 127.0.0.1 /mlaj/Admin/User/check.html?time=Tue%20Aug%2022%202017%2014:20:30%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4)
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wx_admin` [ RunTime:0.0150s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\util\WWW\mlaj\Application\Admin\Controller\UserController.class.php on line 13 and defined D:\util\WWW\mlaj\Xigua\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\util\WWW\mlaj\Xigua\Common\functions.php 第 339 行.
+SQL: SELECT * FROM `wx_admin` WHERE ( username='admin'  ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
