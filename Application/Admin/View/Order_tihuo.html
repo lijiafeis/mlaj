@@ -64,8 +64,15 @@ function dcExcel1() {
     var filename = $('#filename').val();
 	 var time1 = $('#time1').val();
     var time2 = $('#time2').val();
+   if(filename == ''){
+  
+   }else{
+		
     layer.close(openid);
     location.href = "{:U('dchuExcel')}?time1=" + time1 + "&time2=" + time2 + "&filename=" + filename + "&flag=1";
+	    //location.href = "{:U('dchuExcel')}";
+   }
+
 
 }
 

@@ -69,8 +69,13 @@ $(function(){
 			$(this).addClass('text-active').siblings().removeClass('text-active');			
 		});
 	})
-	
+	var flag = 0;
 	function setFukuan(money){
+	if(flag == 1){
+	layer.msg('正在处理');
+		return;
+	}
+	flag = 1;
 		var order_id = $('#order_id').val();
 		var address_id = $('input:radio:checked').val();
 		var content = $('#content').val();

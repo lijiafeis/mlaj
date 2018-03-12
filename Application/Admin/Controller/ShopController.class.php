@@ -12,6 +12,14 @@ use Think\Pageajax;
 use Think\Upload;
 
 class ShopController extends Controller{
+	function __construct(){
+		parent::__construct();
+		//echo session('admin_id');
+		if(!session('admin_id')){
+			$this->error('请登录',U('User/index'));
+		}
+
+	}
     public function shop(){
         $this -> display();
     }

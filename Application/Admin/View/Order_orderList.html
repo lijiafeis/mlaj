@@ -61,7 +61,7 @@
 							</div>
 							<input style="border:0px;border-radius: 4px;height: 34px;" placeholder="下订单时间"  onclick="laydate({istime: true, format: 'YYYY-MM-DD'});" id="starttime" type="text"/>
 							<input style="border:0px;border-radius: 4px;height: 34px;" placeholder="下订单时间" onclick="laydate({istime: true, format: 'YYYY-MM-DD'});" id="endtime" type="text"/>
-							<button style="width: 60px;height: 34px;background: orange;border:0px;border-radius: 4px;" onclick="getDataForDate()">
+							<button style="width: 60px;height: 34px;background: orange;border:0px;border-radius: 4px;" onclick="getDataForDate('{$startTime}','{$endTime}')">
 								查看</button>
 				</div>
 					</div>
@@ -118,25 +118,24 @@ function setDate() {
 }
 
 function dcExcel1() {
+
     var time1 = $('#time1').val();
     var time2 = $('#time2').val();
     var type = $('#type').val();
     var filename = $('#filename').val();
-    layer.close(openid);
-    location.href = "{:U('dchuExcel')}?time1=" + time1 + "&time2=" + time2 + "&filename=" + filename + "&type=" + type;
-//    location.href = "{:U('dchuExcel')}";
+
+   if(filename == ''){
+  
+   }else{
+		layer.close(openid);
+	    location.href = "{:U('dchuExcel')}?time1=" + time1 + "&time2=" + time2 + "&filename=" + filename + "&type=" + type;
+	    //location.href = "{:U('dchuExcel')}";
+   }
+
+    
 
 }
 
-function getDataForDate() {
-    var startTime= $('#starttime').val();
-    var endTime= $('#endtime').val();
-    $('#list').html('<div style="text-align:center;margin-top:30px;"><img src="__PUBLIC__/admin/images/loading.gif" width="60px" ></div>');
-    $("#list").load(
-        "{:U('getDataForDate')}?starttime=" + startTime + "&endtime=" + endTime,
-        function() {}
-    );
-}
 
 
 
@@ -150,9 +149,11 @@ function getpage(p){
     var state = $('#state').val();
     var type = $('#is_fh').val();
     var order = $("#order").val();
+	 var startTime= $('#starttime').val();
+    var endTime= $('#endtime').val();
 	$('#list').html('<div style="text-align:center;margin-top:30px;"><img src="__PUBLIC__/admin/images/loading.gif" width="60px" ></div>');
 	$("#list").load(
-		"{:U('orderbb')}?p="+p+"&order_sn="+order_sn+"&state="+state + "&type=" + type,
+		"{:U('orderbb')}?p="+p+"&order_sn="+order_sn+"&state="+state + "&type=" + type + "&startTime=" + startTime + "&endTime=" + endTime,
 		function() {}
 	);
 	$("#order").val('');
@@ -174,4 +175,6 @@ $('body').on('click','.all_check',function(){
 function createMan() {
 	location.href="{:U('create')}"
 }
+</script>
+<script>
 </script>

@@ -23,9 +23,11 @@ class CenterController extends Controller{
             redirect('http://'.$_SERVER['HTTP_HOST'].U('/wxapi/oauth/index/')."?surl=".$redirect_uri);exit;
         }else{
             $this -> u_id = session('xigua_user_id');
-            $id = M('user') -> where(['u_id' => $this -> u_id]) -> select();
-			$id = $id[0]['id'];
-            $this -> user_id = $id;
+            $id = M('user') -> where(['u_id' => $this -> u_id]) -> find();
+            if($id === null){
+                echo '微信号未注册，请注册绑定';die();
+            }
+            $this -> user_id = $id['id'];
         }
     }
 	
@@ -641,15 +643,20 @@ class CenterController extends Controller{
 	public function fukuan(){
 		$order_id = $_POST['order_id'];
 		$address_id = $_POST['address_id'];
-		$money = $_POST['money'];
+		$money = $_POST['money']*1;
 		$content = $_POST['content'];
+		
 		$jifen = M('user') -> getFieldById($this->user_id,'jifen');
+		$ae = M('order') -> where(['id' => $order_id]) -> select();
+		if(!$ae){echo -2;exit;}
+		if($money != $ae[0]['shopmoney']){echo -2;exit;}
 		if($jifen < $money){
 			echo -1;
 			exit;
 		}else{
 			//先判断上级是否有余额
 			$arr = M('shopping') -> where(['order_id' => $order_id]) -> select();
+			if(!$arr){echo -2;exit;}
 			$sj_userid = M('user') -> getFieldById($this->user_id,'sj_userid');
 			$zt_userid = M('user') -> getFieldById($this->user_id,'zt_userid');
 			$lirun = 0;
@@ -662,7 +669,7 @@ class CenterController extends Controller{
 					$ty = M('shop') -> getFieldById($v['shop_id'],'type');
 					//只有0和1有其它的没有
 					$is_flag = 0;
-					if($ty == 1 || $ty == 0){
+					if($ty == 1 || $ty == 0 || $ty == 5 || $ty == 6){
 						$is_flag = 1;
 						switch($ty){
 							case 1:
@@ -670,6 +677,12 @@ class CenterController extends Controller{
 								break;
 							case 0:
 								$lirun = $lirun + $v['gmnumber'] * 20;
+								break;
+							case 5:
+								$lirun = $lirun + $v['gmnumber'] * 5;
+								break;
+							case 6:
+								$lirun = $lirun + $v['gmnumber'] * 2.5;
 								break;
 						}
 					}
@@ -847,13 +860,14 @@ class CenterController extends Controller{
         $kd1 = $_GET['kd'];
 		//dump($kd);
         $kd = A("Wxapi/Kuaidi");
-		if($kd1 == 'HHTT'){
+		/*if($kd1 == 'HHTT'){
 				$arr = $kd -> getData($kd1,$order_sn);
-			}else{
+				$arr['kd'] = '天天快递';
+			}else{*/
 				$data = $kd -> getMessage($kd1,$order_sn);
 				$data = json_decode($data);
 				$arr = $this -> infoToArray($data);
-			}
+			//}
         
 		$this -> assign('data',$arr[0]);
         $this -> assign('info',$arr[1]);
@@ -1452,9 +1466,9 @@ class CenterController extends Controller{
 	 //生成二维码
     function qr(){
 //        id=" + user_id + "&type=" + type + "&time=" + Math.round(new Date().getTime()/1000).toString();
-        $id = $_GET['id'];
-        $type = $_GET['type'];
-        $time = $_GET['time'];
+        $id = $_GET['id']*1;
+        $type = $_GET['type']*1;
+        $time = time();
         if (! is_dir ( 'Public/webqr/' )) {
             mkdir ( 'Public/webqr/' );
         }
@@ -1462,10 +1476,11 @@ class CenterController extends Controller{
         $value = "http://" . $_SERVER['SERVER_NAME'] . "/Home/User/zhuce&id=" . $id . "&type=" . $type . "&time=" . $time;
         $errorCorrectionLevel = "L";
         $matrixPointSize = "6";
-        $file_name = 'Public/webqr/' . $this -> user_id . '.png';
-		if(file_exists($file_name)){
-			unlink($file_name);
-		}
+        $flag = mt_rand(100,999);
+        $file_name = 'Public/webqr/' . $this -> user_id . 'qr' . $flag .  '.png';
+//		if(file_exists($file_name)){
+//			unlink($file_name);
+//		}
         \QRcode::png ( $value,$file_name , $errorCorrectionLevel, $matrixPointSize, 1, true );
         $qrimg = A ( "Wxapi/Qrimg" );
         // $user_info = M('users') ->field("nickname,headimgurl") -> getByUser_id($this->user_id);
@@ -1500,7 +1515,8 @@ class CenterController extends Controller{
         $value = "http://" . $_SERVER['SERVER_NAME'] . "/Home/User/zhuce&id=" . $id . "&type=" . $type . "&time=" . $time;
         $errorCorrectionLevel = "L";
         $matrixPointSize = "6";
-        $file_name = 'Public/webqr/' . $this -> user_id . '.jpg';
+        $a = mt_rand(100,999);
+        $file_name = 'Public/webqr/' . $this -> user_id . 'qr' . $a .  '.jpg';
 		if(file_exists($file_name)){
 			unlink($file_name);
 		}

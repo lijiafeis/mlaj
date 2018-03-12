@@ -10,7 +10,14 @@ use Think\Controller;
 use Think\Pageajax;
 
 class OrderController extends Controller{
+function __construct(){
+		parent::__construct();
+		//echo session('admin_id');
+		if(!session('admin_id')){
+			$this->error('请登录',U('User/index'));
+		}
 
+	}
     //订单列表展示
     public function orderList(){
         $this -> display();
@@ -21,8 +28,16 @@ class OrderController extends Controller{
         $state = $_GET['state'];
         $type = $_GET['type'];
         $model = M('order');
-     
-        $where = array();
+		$startTime = $_GET['startTime'];
+        $endTime = $_GET['endTime'];
+        $startTime = strtotime($startTime);
+        $endTime = strtotime($endTime);
+		$where = array();
+		if($startTime || $endTime){
+			$where['time'] = ['between',[$startTime,$endTime]];
+		}
+        
+      
         if($order_sn){
             $where["order_sn"] = $order_sn;
         }
@@ -108,6 +123,8 @@ class OrderController extends Controller{
         // 实例化分页类 传入总记录数和每页显示的记录数(25)
         $show = $Page->show();
         $this->assign('count',$count);
+		$this -> assign('startTime',$startTime);
+		$this -> assign('endTime',$endTime);
         $this->assign('page',$show);
         $this->assign('empty','<tr><td colspan="9" style="text-align:center;line-height:40px;">没有查询到相关信息</td></tr>');
         $this->display('orderbb');
@@ -244,7 +261,7 @@ class OrderController extends Controller{
 			}
 			$data = M('order')
 				-> alias("a")
-				-> field("a.*,a.time as or_time,b.*,a.type as or_type,c.address as add1,c.address as add2")
+				-> field("a.*,a.time as or_time,b.*,a.type as or_type,c.address as add1,c.address as add2,a.id as aid")
 				-> join("left join __USER__ as b on a.user_id = b.id")
 				-> join("left join __ADDRESS__ as c on a.address_id = c.id")
 				-> where($where)
@@ -253,7 +270,7 @@ class OrderController extends Controller{
 		}else{
 			$data = M('tihuo')
 				-> alias('d')
-				-> field("a.*,a.time as or_time,b.*,a.type as or_type,c.address as add1,c.address as add2")
+				-> field("a.*,a.time as or_time,b.*,a.type as or_type,c.address as add1,c.address as add2,b.id as aid")
 				-> join("left join __ORDER__ as a on d.order_id = a.id")
 				-> join("left join __USER__ as b on a.user_id = b.id")
 				-> join("left join __ADDRESS__ as c on a.address_id = c.id")
@@ -261,6 +278,8 @@ class OrderController extends Controller{
 				-> order("d.time desc")
 				-> select();
 		}
+
+
         //dump($data);
 		//exit;
         //导入Excel使用的类库
@@ -293,7 +312,7 @@ class OrderController extends Controller{
             -> setCellValue("K1","商品");
         $j = 2;
         foreach ($data as $k => $v){
-            $shop_order = M('shopping') -> where("order_id = {$v['id']}") -> select();
+            $shop_order = M('shopping') -> where("order_id = {$v['aid']}") -> select();
             $str = '';
             foreach ($shop_order as $k1 => $v1){
                 $str = "【{$v['shop_name']} 数量：{$v1['gmnumber']} 规格：{$v1['size']} 单位：{$v1['danwei']}】";
@@ -306,7 +325,7 @@ class OrderController extends Controller{
 					$type = '已发货';
 					break;
 			}
-            $objSheet -> setCellValue("A".$j,$v['id'])
+            $objSheet -> setCellValue("A".$j,$v['user_id'])
                 -> setCellValue("B".$j,$v['name'])
                // -> setCellValue("C".$j,$v['wxname'])
                 -> setCellValue("C".$j,$v['tel'])
@@ -322,16 +341,16 @@ class OrderController extends Controller{
         }
         $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
         $path = "Uploads/xls";
+
         if(!is_dir($path)){
             mkdir($path);
         }
         $res = $objWriter->save("$path/$name.xls");
 //        file_put_contents('3423.txt',$res);
-        $file_xls = dirname(dirname(dirname(__DIR__))) . "\\" . $path . "\\" . $name.".xls";    //   文件的保存路径
+        $file_xls = dirname(dirname(dirname(__DIR__))) . '/' . $path . '/' . $name.".xls";    //   文件的保存路径
 
         $example_name=basename($file_xls);  //获取文件名
-
-
+      
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
         header('Content-Disposition: attachment; filename='.mb_convert_encoding($example_name,"gb2312","utf-8"));  //转换文件名的编码

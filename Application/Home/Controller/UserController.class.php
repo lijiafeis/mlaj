@@ -63,6 +63,9 @@ class UserController extends Controller {
 			    //判断是否在自己的微信号上登录
 //                if($res[0]['u_id'] == $this->user_id){
                     session('flag',1);
+					if($res[0]['id'] == 9 || $res[0]['id'] == 321 || $res[0]['id'] == 87){
+						exit;
+					}
 					cookie('username',$tel);
 					cookie('password',$password);
                     echo 0;
@@ -85,7 +88,10 @@ class UserController extends Controller {
 //            dump(session('sj_userid'));
 //            dump(session('type'));
 //            exit;
-            $type = $_GET['type'];
+            $type = $_GET['type']*1;
+            if($type <= 0 || $type > 5){
+                exit;
+            }
 			//dump($sj_userid);
 			//exit;
             $code = A('Wxapi/ImageCode');

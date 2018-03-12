@@ -6,8 +6,8 @@
 <title></title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/home2/css/style06.09.css"/>
 <style>
-.flex_wrap{display: flex;border-bottom: 1px #f0f0f0 solid;height: 40px;line-height: 40px;}
-.flex{flex: 1;text-align: center;}
+.flex_wrap{border-bottom: 1px #f0f0f0 solid;height: 40px;line-height: 40px;}
+.flex{text-align: center;width: 33.33%;float: left;}
 .text_wrap{padding: 0 10px;}
 .text_wrap .text{padding: 10px;border-bottom: 1px #f0f0f0 solid;}
 .goods{padding: 15px;display: flex;border-bottom: 1px #f0f0f0 solid;position: relative;}
@@ -46,6 +46,7 @@
 		<div class="flex tab1 jh active">进货</div>
 		<div class="flex tab1 zy">转移库存</div>
 		<div class="flex tab1 th">提货</div>
+		<div class="clear"></div>
 	</div>
 
 	<div class="panes">
@@ -96,13 +97,16 @@
 					</div>
 				</div>
 				<div class="r_add" style="bottom:2px;">
+				<if condition="$vv.type neq 4">
 					<input style="margin-right:0px;width:20px;height:20px;" class="add" type="button" name=""  onclick="zhuanyi({$vv.id},{$vv.kucun},2)" id="zhuanyi" value="－" readonly="readonly"/>
 					<input class="sum_num zhuanyi"  type="hidden" name="" id="" value="a"  readonly="readonly"/>
 					<input class="sum_num zhuanyi" type="" name="" id="zhuanyi{$vv.id}" value="0"  readonly="readonly"/>
 					<input class="sum_num zhuanyi" type="hidden" name="" id="zyId" value="{$vv.id}"  readonly="readonly"/>
 					
 					<input class="add" style="width:20px;height:20px;" type="button" name="" readonly="readonly" onclick="zhuanyi({$vv.id},{$vv.kucun},1)" id="zhuanyi" value="✚" readonly="readonly"/>
+				</if>
 				</div>
+				
 			</div>
 			</volist>
 			<div style="width:100%;height:32px;"></div>

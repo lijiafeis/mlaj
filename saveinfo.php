@@ -27,7 +27,7 @@ define('BIND_MODULE','Console');
 //define('')
 $_GET['m'] = 'Console';
 $_GET['c'] = 'Index';
-$_GET['a'] = 'test1';
+$_GET['a'] = 'test3';
 
 // 引入ThinkPHP入口文件
 //include'./Xigua/Xigua.php';

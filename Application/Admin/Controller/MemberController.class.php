@@ -12,7 +12,14 @@ use Think\Controller;
 use Think\Pageajax;
 
 class MemberController extends Controller{
+function __construct(){
+		parent::__construct();
+		//echo session('admin_id');
+		if(!session('admin_id')){
+			$this->error('请登录',U('User/index'));
+		}
 
+	}
     //显示会员信息
     public function memberList(){
 		$syz = M('shop') -> where(['type' => 2]) -> select();

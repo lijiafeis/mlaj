@@ -10,7 +10,14 @@ use Think\Controller;
 use Think\Upload;
 
 class MessageController extends Controller{
+function __construct(){
+		parent::__construct();
+		//echo session('admin_id');
+		if(!session('admin_id')){
+			$this->error('请登录',U('User/index'));
+		}
 
+	}
     //公司简介
     public function gsjj(){
         if(IS_GET){

@@ -10,7 +10,7 @@ class UserController extends Controller{
 	/* 检查登录信息 */
 	function check(){
 		$admin =  D('Admin');
-		$res = $admin->check_user(I());
+		$res = $admin->check_user($_POST);
 		$arr = array();
 		if(!$res){
 			$arr['success'] = 0;
